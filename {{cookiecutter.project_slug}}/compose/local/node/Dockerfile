@@ -1,9 +1,9 @@
 FROM node:10-stretch-slim
 
-WORKDIR /app
+WORKDIR /app/frontend
 
-COPY ./package.json /app
+COPY ./frontend/package.json /app/frontend
 
 RUN npm install && npm cache clean --force
 
-ENV PATH ./node_modules/.bin/:$PATH
+ENV PATH ./frontend/node_modules/.bin/:$PATH
