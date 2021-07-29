@@ -5,7 +5,10 @@ set -o pipefail
 set -o nounset
 
 
+python /app/manage.py makemigrations
+python /app/manage.py migrate
 python /app/manage.py collectstatic --noinput
+
 {% if cookiecutter.use_whitenoise == 'y' and cookiecutter.use_compressor == 'y' %}
 compress_enabled() {
 python << END
