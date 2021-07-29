@@ -1,0 +1,13 @@
+
+cd {{cookiecutter.project_slug}};
+docker-compose -f local.yml up
+sudo docker-compose -f local.yml down; sudo docker-compose -f local.yml up --build
+sudo docker-compose -f local.yml logs; sudo docker-compose -f local.yml ps
+sudo docker-compose -f local.yml run django python manage.py shell
+sudo docker-compose -f local.yml run django python manage.py createsuperuser
+
+docker ps # note containerid == ${CID} below
+export CID=<CID ABOVE>
+docker cp ${CID}:/app/celery_data ./celery_data
+
+sudo systemctl daemon-reload; sudo systemctl restart docker

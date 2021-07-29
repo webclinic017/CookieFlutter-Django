@@ -1,0 +1,67 @@
+{
+  "project_name": "Example",
+  "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+  "description": "Behold, the magnificent {{ cookiecutter.project_name.upper() }}!!!",
+  "author_name": "Full Name",
+  "domain_name": "{{ cookiecutter.project_slug }}.com",
+  "server_ip_address": "40.114.177.156",
+  "email": "{{ cookiecutter.author_name.lower()|replace(' ', '.') }}@{{ cookiecutter.domain_name }}",
+  "version": "0.0.1",
+  "open_source_license": [
+    "Not open source",
+    "MIT",
+    "BSD",
+    "GPLv3",
+    "Apache Software License 2.0"
+  ],
+  "timezone": "America/Chicago",
+  "windows": "n",
+  "use_pycharm": "n",
+  "use_docker": "y",
+  "postgresql_version": [
+    "13.2",
+    "12.6",
+    "11.11",
+    "10.16"
+  ],
+  "js_task_runner": [
+    "Gulp",
+    "None"
+  ],
+  "cloud_provider": [
+    "GCP",
+    "AWS",
+    "None"
+  ],
+  "mail_service": [
+    "Mailgun",
+    "Amazon SES",
+    "Mailjet",
+    "Mandrill",
+    "Postmark",
+    "Sendgrid",
+    "SendinBlue",
+    "SparkPost",
+    "Other SMTP"
+  ],
+  "use_async": "y",
+  "use_drf": "y",
+  "custom_bootstrap_compilation": "y",
+  "use_compressor": "y",
+  "use_celery": "y",
+  "use_mailhog": "y",
+  "use_sentry": "y",
+  "use_whitenoise": "y",
+  "use_gis_tools": "y",
+  "use_web_crawling_tools": "y",
+  "use_data_science_tools": "y",
+  "use_heroku": "n",
+  "ci_tool": [
+    "None",
+    "Travis",
+    "Gitlab",
+    "Github"
+  ],
+  "keep_local_envs_in_vcs": "y",
+  "debug": "n"
+}

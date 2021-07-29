@@ -1,0 +1,27 @@
+cd ../; rsync -avz --exclude-from={{cookiecutter.project_slug}}/exclude.txt {{cookiecutter.project_slug}}/ root@{{cookiecutter.server_ip_address}}:/root/{{cookiecutter.project_slug}}/; ssh root@{{cookiecutter.server_ip_address}};
+
+cd ../; 
+rsync -avz --exclude-from={{cookiecutter.project_slug}}/exclude.txt {{cookiecutter.project_slug}}/ root@{{cookiecutter.server_ip_address}}:/root/{{cookiecutter.project_slug}}/;
+ssh root@{{cookiecutter.server_ip_address}};
+
+cd {{cookiecutter.project_slug}};
+sudo docker-compose -f production.yml down; sudo docker-compose -f production.yml up --build
+sudo docker-compose -f production.yml logs; sudo docker-compose -f production.yml ps
+sudo docker-compose -f production.yml run django python manage.py shell
+sudo docker-compose -f production.yml run django python manage.py createsuperuser
+
+helpful commands
+================
+# https://stackoverflow.com/questions/53902507/unknown-error-session-deleted-because-of-page-crash-from-unknown-error-cannot
+sudo mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=512M tmpfs /dev/shm
+
+system docker prune -af;
+systemctl restart docker
+rm -rd {{cookiecutter.project_slug}}/
+
+docker ps # note containerid == ${CID} below
+export CID=<CID ABOVE>
+docker cp ${CID}:/app/celery_data ./celery_data
+
+rsync -avz root@{{cookiecutter.server_ip_address}}:/root/{{cookiecutter.project_slug}}/celery_data celery_daya/
+
