@@ -15,3 +15,26 @@ REDIS_URL=redis://redis:6379/0
 CELERY_FLOWER_USER=!!!SET CELERY_FLOWER_USER!!!
 CELERY_FLOWER_PASSWORD=!!!SET CELERY_FLOWER_PASSWORD!!!
 {%- endif %}
+
+# Email
+# ------------------------------------------------------------------------------
+DJANGO_SERVER_EMAIL=django.core.mail.backends.smtp.EmailBackend
+{% if cookiecutter.mail_service == 'Mailgun' %}
+MAILGUN_API_KEY=
+MAILGUN_DOMAIN=mail.{{ cookiecutter.domain_name }}
+{% elif cookiecutter.mail_service == 'Mailjet' %}
+MAILJET_API_KEY=
+MAILJET_SECRET_KEY=
+{% elif cookiecutter.mail_service == 'Mandrill' %}
+MANDRILL_API_KEY=
+{% elif cookiecutter.mail_service == 'Postmark' %}
+POSTMARK_SERVER_TOKEN=
+{% elif cookiecutter.mail_service == 'Sendgrid' %}
+SENDGRID_API_KEY=
+SENDGRID_GENERATE_MESSAGE_ID=True
+SENDGRID_MERGE_FIELD_FORMAT=None
+{% elif cookiecutter.mail_service == 'SendinBlue' %}
+SENDINBLUE_API_KEY=
+{% elif cookiecutter.mail_service == 'SparkPost' %}
+SPARKPOST_API_KEY=
+{% endif %}

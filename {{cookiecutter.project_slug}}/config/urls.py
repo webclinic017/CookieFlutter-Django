@@ -9,6 +9,8 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 {%- if cookiecutter.use_drf == 'y' %}
 from rest_framework.authtoken.views import obtain_auth_token
+from rest_auth.views import LogoutView
+from {{ cookiecutter.project_slug }}.users.api.views import *
 {%- endif %}
 
 urlpatterns = [
@@ -34,7 +36,20 @@ urlpatterns += [
     # API base url
     path("api/", include("config.api_router")),
     # DRF auth token
-    path("auth-token/", obtain_auth_token),
+    path("api/auth-token/", obtain_auth_token),
+
+    path('api/user/', UserDetailsAPIView.as_view(), name='rest_user_details'),
+    path('api/login/', LoginUserView.as_view(), name='account_login'),
+    path('api/password/change/', PasswordUserChangeView.as_view(), name='rest_password_change'),
+    path('api/password/reset/', PasswordResetUserView.as_view(), name='rest_password_reset'),
+    path('api/', include('rest_auth.urls')),
+    path('api/registration/', RegisterUserView.as_view(), name='account_signup'),
+    path('api/rest-auth/registration/', include('rest_auth.registration.urls')),
+    path('api/account-confirm-email/<str:key>/', VerifyUserEmailView.as_view(), name='account_confirm_email'),
+    path('api/password/reset/confirm/<str:uid>/<str:token>/', PasswordResetConfirmUserView.as_view(), name='rest_password_reset_confirm'),
+    path('api/logout/', LogoutView.as_view(), name='rest_logout'),
+
+
 ]
 {%- endif %}
 

@@ -13,10 +13,10 @@ DJANGO_SECURE_SSL_REDIRECT=False
 
 # Email
 # ------------------------------------------------------------------------------
-DJANGO_SERVER_EMAIL=
+DJANGO_SERVER_EMAIL=django.core.mail.backends.smtp.EmailBackend
 {% if cookiecutter.mail_service == 'Mailgun' %}
 MAILGUN_API_KEY=
-MAILGUN_DOMAIN=
+MAILGUN_DOMAIN=mail.{{ cookiecutter.domain_name }}
 {% elif cookiecutter.mail_service == 'Mailjet' %}
 MAILJET_API_KEY=
 MAILJET_SECRET_KEY=
@@ -33,7 +33,7 @@ SENDINBLUE_API_KEY=
 {% elif cookiecutter.mail_service == 'SparkPost' %}
 SPARKPOST_API_KEY=
 {% endif %}
-{% if cookiecutter.cloud_provider == 'AWS' %}
+
 # AWS
 # ------------------------------------------------------------------------------
 DJANGO_AWS_ACCESS_KEY_ID=
