@@ -23,7 +23,7 @@ const Hero = (): React$Element<'section'> => {
                             </h2>
 
                             <p className="mb-4 font-16 text-white-50">
-                                {{ cookiecutter.project_name }} is a fully featured dashboard and admin template comes with tones of well designed
+                                Hyper is a fully featured dashboard and admin template comes with tones of well designed
                                 UI elements, components, widgets and pages.
                             </p>
 

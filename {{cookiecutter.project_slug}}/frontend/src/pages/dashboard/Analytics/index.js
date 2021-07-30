@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 // components
-import {{ cookiecutter.project_name }}Datepicker from '../../../components/Datepicker';
+import HyperDatepicker from '../../../components/Datepicker';
 
 import Statistics from './Statistics';
 import SessionsChart from './SessionsChart';
@@ -34,7 +34,7 @@ const AnalyticsDashboardPage = (): React$Element<React$FragmentType> => {
                         <div className="page-title-right">
                             <form className="d-flex">
                                 <div className="input-group">
-                                    <{{ cookiecutter.project_name }}Datepicker
+                                    <HyperDatepicker
                                         value={selectedDate}
                                         inputClass="form-control-light"
                                         onChange={(date) => {

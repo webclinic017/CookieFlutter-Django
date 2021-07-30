@@ -8,7 +8,7 @@ import MaskedInput from 'react-text-mask';
 
 // components
 import PageTitle from '../../components/PageTitle';
-import {{ cookiecutter.project_name }}Datepicker from '../../components/Datepicker';
+import HyperDatepicker from '../../components/Datepicker';
 
 const ReactSelect = () => {
     return (
@@ -117,7 +117,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Single Date</label> <br />
-                            <{{ cookiecutter.project_name }}Datepicker
+                            <HyperDatepicker
                                 hideAddon={true}
                                 value={selectedDate}
                                 onChange={(date) => {
@@ -129,7 +129,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Single Date with multiple months</label> <br />
-                            <{{ cookiecutter.project_name }}Datepicker
+                            <HyperDatepicker
                                 hideAddon={true}
                                 monthsShown={2}
                                 value={selectedDate}
@@ -145,7 +145,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="form-group mb-3">
                             <label className="form-label">Custom date format</label> <br />
-                            <{{ cookiecutter.project_name }}Datepicker
+                            <HyperDatepicker
                                 hideAddon={true}
                                 dateFormat="yyyy-MM-dd"
                                 value={selectedDate}
@@ -158,7 +158,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Specific date range</label> <br />
-                            <{{ cookiecutter.project_name }}Datepicker
+                            <HyperDatepicker
                                 hideAddon={true}
                                 minDate={new Date()}
                                 maxDate={new Date(new Date().setDate(new Date().getDate() + 7))}
@@ -175,7 +175,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Select Time</label> <br />
-                            <{{ cookiecutter.project_name }}Datepicker
+                            <HyperDatepicker
                                 hideAddon={true}
                                 showTimeSelect
                                 timeFormat="HH:mm"
@@ -192,7 +192,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Time only</label> <br />
-                            <{{ cookiecutter.project_name }}Datepicker
+                            <HyperDatepicker
                                 hideAddon={true}
                                 showTimeSelect
                                 showTimeSelectOnly

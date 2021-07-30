@@ -135,7 +135,7 @@ const ViewsChart = (): React$Element<any> => {
                             <tr>
                                 <td>
                                     <a href="/" className="text-muted">
-                                        /{{ cookiecutter.project_slug}}/dashboard-analytics
+                                        /hyper/dashboard-analytics
                                     </a>
                                 </td>
                                 <td>25</td>
@@ -144,7 +144,7 @@ const ViewsChart = (): React$Element<any> => {
                             <tr>
                                 <td>
                                     <a href="/" className="text-muted">
-                                        /{{ cookiecutter.project_slug}}/dashboard-crm
+                                        /hyper/dashboard-crm
                                     </a>
                                 </td>
                                 <td>15</td>

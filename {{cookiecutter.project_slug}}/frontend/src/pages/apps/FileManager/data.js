@@ -12,7 +12,7 @@ import Avatar10 from '../../../assets/images/users/avatar-10.jpg';
 const quickAccessFiles = [
     {
         icon: 'mdi mdi-folder-zip font-16',
-        name: '{{ cookiecutter.project_name }}-sketch.zip',
+        name: 'Hyper-sketch.zip',
         size: '2.3 MB',
     },
     {
@@ -42,7 +42,7 @@ const quickAccessFiles = [
     },
     {
         icon: 'mdi mdi-folder-account font-16',
-        name: '{{ cookiecutter.project_name }} Integrations',
+        name: 'Hyper Integrations',
         size: '874 MB',
     },
 ];
@@ -74,7 +74,7 @@ const recentFiles = [
         ],
     },
     {
-        name: '{{ cookiecutter.project_name }}-sketch-design.zip',
+        name: 'Hyper-sketch-design.zip',
         modifiedDate: 'Feb 13, 2020',
         modifiedBy: 'Coderthemes',
         size: '521 MB',

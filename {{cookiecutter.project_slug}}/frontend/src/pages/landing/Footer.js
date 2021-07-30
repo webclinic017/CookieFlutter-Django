@@ -13,7 +13,7 @@ const Footer = (): React$Element<React$FragmentType> => {
                         <Col lg={6}>
                             <img src={logo} alt="" className="logo-dark" height="18" />
                             <p className="text-muted mt-4">
-                                {{ cookiecutter.project_name }} makes it easier to build better websites with
+                                Hyper makes it easier to build better websites with
                                 <br /> great speed. Save hundreds of hours of design
                                 <br /> and development by using it.
                             </p>
@@ -123,7 +123,7 @@ const Footer = (): React$Element<React$FragmentType> => {
                         <Col>
                             <div className="mt-5">
                                 <p className="text-muted mt-4 text-center mb-0">
-                                    © 2018 - 2021 {{ cookiecutter.project_name }}. Design and coded by Coderthemes
+                                    © 2018 - 2021 Hyper. Design and coded by Coderthemes
                                 </p>
                             </div>
                         </Col>

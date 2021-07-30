@@ -310,7 +310,7 @@ const Typography = (): React$Element<React$FragmentType> => {
                             <p className="text-muted font-14">
                                 For quoting blocks of content from another source within your document. Wrap{' '}
                                 <code>&lt;blockquote className="blockquote"&gt;</code> around any{' '}
-                                <abbr title="{{ cookiecutter.project_name }}Text Markup Language">HTML</abbr> as the quote.
+                                <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
                             </p>
 
                             <blockquote className="blockquote">

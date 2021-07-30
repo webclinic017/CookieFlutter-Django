@@ -47,7 +47,7 @@ const DatepickerInputWithAddon = forwardRef((props: DatepickerInputWithAddonProp
     </div>
 ));
 
-type {{ cookiecutter.project_name }}DatepickerProps = {
+type HyperDatepickerProps = {
     value: Date,
     onChange: (date: any) => void,
     hideAddon?: boolean,
@@ -63,7 +63,7 @@ type {{ cookiecutter.project_name }}DatepickerProps = {
     inline?: boolean,
 };
 
-const {{ cookiecutter.project_name }}Datepicker = (props: {{ cookiecutter.project_name }}DatepickerProps): React$Element<any> => {
+const HyperDatepicker = (props: HyperDatepickerProps): React$Element<any> => {
     // handle custom input
     const input = (props.hideAddon || false) === true ? <DatepickerInput /> : <DatepickerInputWithAddon />;
 
@@ -91,4 +91,4 @@ const {{ cookiecutter.project_name }}Datepicker = (props: {{ cookiecutter.projec
     );
 };
 
-export default {{ cookiecutter.project_name }}Datepicker;
+export default HyperDatepicker;

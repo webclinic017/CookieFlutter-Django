@@ -230,7 +230,7 @@ const Timeline = (): React$Element<React$FragmentType> => {
                                         <i className="mdi mdi-adjust"></i>
                                     </span>
                                     <h4 className="mt-0 mb-1 font-16">
-                                        First release of {{ cookiecutter.project_name }} admin dashboard template
+                                        First release of Hyper admin dashboard template
                                     </h4>
                                     <p className="text-muted">
                                         <small>16 July, 2018</small>

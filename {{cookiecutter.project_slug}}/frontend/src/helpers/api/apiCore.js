@@ -41,7 +41,7 @@ axios.interceptors.response.use(
     }
 );
 
-const AUTH_SESSION_KEY = '{{ cookiecutter.project_slug}}_user';
+const AUTH_SESSION_KEY = 'hyper_user';
 
 /**
  * Sets the default authorization

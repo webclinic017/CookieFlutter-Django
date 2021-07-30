@@ -225,7 +225,7 @@ for (const user of users) {
             message: {
                 type: 'file',
                 value: {
-                    file: '{{ cookiecutter.project_name }}-admin.zip',
+                    file: 'Hyper-admin.zip',
                     size: '2.3MB',
                 },
             },
