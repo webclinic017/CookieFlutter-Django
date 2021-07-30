@@ -21,27 +21,27 @@
 
       <ul>
         <li>api/users/</li>
-        <li>/rest-auth/login/ (POST)</li>
+        <li>api/rest-auth/login/ (POST)</li>
           <dt>POST: username, email, password</dt>
           <dt>Returns: Token Key</dt>
-        <li>/rest-auth/logout/ (POST)</li>
+        <li>api/rest-auth/logout/ (POST)</li>
           <dt>NOTE: ACCOUNT_LOGOUT_ON_GET = True to allow logout using GET </dt>
-        <li>/rest-auth/password/reset/ (POST)</li>
+        <li>api/rest-auth/password/reset/ (POST)</li>
           <dt>POST: email</dt>
-        <li>/rest-auth/password/reset/confirm/ (POST)</li>
+        <li>api/rest-auth/password/reset/confirm/ (POST)</li>
           <dt>POST: uid, token, new_password1, new_password2</dt>
           <dt>NOTE: uid and token are sent in email after calling /rest-auth/password/reset/</dt>
-        <li>/rest-auth/password/change/ (POST)</li>
+        <li>api/rest-auth/password/change/ (POST)</li>
           <dt>POST: new_password1, new_password2, old_password</dt>
           <dt>NOTE: OLD_PASSWORD_FIELD_ENABLED = True to use old_password.</dt>
           <dt>NOTE: LOGOUT_ON_PASSWORD_CHANGE = False to keep the user logged in after password change</dt>
-        <li>/rest-auth/user/ (GET, PUT, PATCH)</li>
+        <li>api/rest-auth/user/ (GET, PUT, PATCH)</li>
           <dt>POST: username, first_name, last_name</dt>
           <dt>Returns: pk, username, email, first_name, last_name</dt>
     
-        <li>/rest-auth/registration/ (POST)</li>
+        <li>api/rest-auth/registration/ (POST)</li>
           <dt>POST: username,password1,password2, email</dt>
-        <li>/rest-auth/registration/verify-email/ (POST)</li>
+        <li>api/rest-auth/registration/verify-email/ (POST)</li>
           <dt>POST: key</dt>
 
       </ul>
