@@ -43,7 +43,7 @@ const Activity = (): React$Element<any> => {
                             </td>
                             <td>
                                 <span className="text-muted font-13">Project</span> <br />
-                                <p className="mb-0">Hyper Mockup</p>
+                                <p className="mb-0">{% raw %}{{cookiecutter.project_name}}{% endraw %} Mockup</p>
                             </td>
                             <td className="table-action" style={% raw %}{{ width: '50px' }}>{% endraw %}
                                 <Dropdown className="float-end" align="end">
@@ -73,7 +73,7 @@ const Activity = (): React$Element<any> => {
                             </td>
                             <td>
                                 <span className="text-muted font-13">Project</span> <br />
-                                <p className="mb-0">Hyper Mockup</p>
+                                <p className="mb-0">{% raw %}{{cookiecutter.project_name}}{% endraw %} Mockup</p>
                             </td>
                             <td className="table-action" style={% raw %}{{ width: '50px' }}>{% endraw %}
                                 <Dropdown className="float-end" align="end">
@@ -157,7 +157,7 @@ const Activity = (): React$Element<any> => {
                                             Francis Achin
                                             <small className="fw-normal ms-3">08 Jan 2019 12:28 pm</small>
                                         </h5>
-                                        <span className="font-13">Assigned task "Hyper app design"...</span>
+                                        <span className="font-13">Assigned task "{% raw %}{{cookiecutter.project_name}}{% endraw %} app design"...</span>
                                     </div>
                                 </div>
                             </td>

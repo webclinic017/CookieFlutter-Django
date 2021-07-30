@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card, Dropdown, Row, Col } from 'react-bootstrap';
 
 // components
-import HyperDatepicker from '../../../components/Datepicker';
+import Datepicker from '../../../components/Datepicker';
 
 const Calendar = (): React$Element<any> => {
     const [date, setDate] = useState(new Date());
@@ -27,7 +27,7 @@ const Calendar = (): React$Element<any> => {
 
                 <Row>
                     <Col md={7} className="calendar-widget">
-                        <HyperDatepicker value={date} onChange={(date) => setDate(date)} inline />
+                        <Datepicker value={date} onChange={(date) => setDate(date)} inline />
                     </Col>
                     <Col md={5}>
                         <ul className="list-unstyled">
@@ -41,7 +41,7 @@ const Calendar = (): React$Element<any> => {
                                 <p className="text-muted mb-1 font-13">
                                     <i className="mdi mdi-calendar"></i> 10:30 AM - 11:45 AM
                                 </p>
-                                <h5>Design Review - Hyper Admin</h5>
+                                <h5>Design Review - {% raw %}{{cookiecutter.project_name}}{% endraw %} Admin</h5>
                             </li>
                             <li className="mb-4">
                                 <p className="text-muted mb-1 font-13">

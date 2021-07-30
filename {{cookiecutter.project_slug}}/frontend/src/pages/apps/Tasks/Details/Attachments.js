@@ -43,7 +43,7 @@ const Attachments = (state: AttachmentsState): React$Element<React$FragmentType>
                                 </div>
                                 <div className="col ps-0">
                                     <a href="/" className="text-muted fw-bold">
-                                        Hyper-admin-design.zip
+                                        admin-design.zip
                                     </a>
                                     <p className="mb-0">2.3 MB</p>
                                 </div>

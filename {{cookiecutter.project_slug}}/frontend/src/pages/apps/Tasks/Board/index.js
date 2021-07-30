@@ -8,7 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 // components
 import PageTitle from '../../../../components/PageTitle';
-import HyperDatepicker from '../../../../components/Datepicker';
+import Datepicker from '../../../../components/Datepicker';
 import { FormInput } from '../../../../components/';
 
 import TaskItem from './Task';
@@ -376,7 +376,7 @@ const Kanban = (): React$Element<React$FragmentType> => {
                                 errors={errors}
                                 control={control}>
                                 <option>Select</option>
-                                <option>Hyper</option>
+                                <option>{% raw %}{{cookiecutter.project_name}}{% endraw %}</option>
                                 <option>CRM</option>
                                 <option>iOS App</option>
                             </FormInput>
@@ -452,7 +452,7 @@ const Kanban = (): React$Element<React$FragmentType> => {
                                 <Col md={6}>
                                     <div className="form-group">
                                         <label className="form-label">Due Date</label> <br />
-                                        <HyperDatepicker
+                                        <Datepicker
                                             hideAddon={true}
                                             dateFormat="yyyy-MM-dd"
                                             value={state.newTask.dueDate}

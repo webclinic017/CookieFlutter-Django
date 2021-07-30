@@ -66,7 +66,7 @@ const DefaultToasts = () => {
                             <Toast onClose={() => setShow(false)} show={show}>
                                 <Toast.Header>
                                     <img src={logo} alt="brand-logo" height="12" className="me-1" />
-                                    <strong className="me-auto">Hyper</strong>
+                                    <strong className="me-auto">{% raw %}{{cookiecutter.project_name}}{% endraw %}</strong>
                                     <small className="ms-5">11 mins ago</small>
                                 </Toast.Header>
                                 <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
@@ -86,7 +86,7 @@ const DefaultToasts = () => {
                             <Toast onClose={() => setShowTranslucent(false)} show={showTranslucent}>
                                 <Toast.Header>
                                     <img src={logo} alt="brand-logo" height="12" className="me-1" />
-                                    <strong className="me-auto">Hyper</strong>
+                                    <strong className="me-auto">{% raw %}{{cookiecutter.project_name}}{% endraw %}</strong>
                                     <small className="ms-5">11 mins ago</small>
                                 </Toast.Header>
                                 <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
@@ -113,7 +113,7 @@ const DefaultToasts = () => {
                                             <Toast key={index} onClose={() => handleClose(index)}>
                                                 <Toast.Header>
                                                     <img src={logo} alt="brand-logo" height="12" className="me-1" />
-                                                    <strong className="me-auto">Hyper</strong>
+                                                    <strong className="me-auto">{% raw %}{{cookiecutter.project_name}}{% endraw %}</strong>
                                                     <small className="ms-5">{item.time}</small>
                                                 </Toast.Header>
                                                 <Toast.Body>{item.desc}</Toast.Body>
@@ -142,7 +142,7 @@ const DefaultToasts = () => {
                                 <Toast onClose={() => setShowPlacement(false)} show={showPlacement}>
                                     <Toast.Header>
                                         <img src={logo} alt="brand-logo" height="12" className="me-1" />
-                                        <strong className="me-auto">Hyper</strong>
+                                        <strong className="me-auto">{% raw %}{{cookiecutter.project_name}}{% endraw %}</strong>
                                         <small className="ms-5">1 mins ago</small>
                                     </Toast.Header>
                                     <Toast.Body>Heads up, toasts will stack automatically</Toast.Body>
@@ -186,7 +186,7 @@ const DefaultToasts = () => {
                                         <Toast>
                                             <Toast.Header closeButton={false}>
                                                 <img src={logo} className="me-1" alt="" height="12" />
-                                                <strong className="me-auto">Hyper</strong>
+                                                <strong className="me-auto">{% raw %}{{cookiecutter.project_name}}{% endraw %}</strong>
                                                 <small>11 mins ago</small>
                                             </Toast.Header>
                                             <Toast.Body>Hello, world! This is a toast message.</Toast.Body>

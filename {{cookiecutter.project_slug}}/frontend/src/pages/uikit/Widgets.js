@@ -79,7 +79,7 @@ const Activity = () => {
                                 <a href="/" className="text-info fw-bold mb-1 d-block">
                                     You sold an item
                                 </a>
-                                <small>Paul Burgess just purchased “Hyper - Admin Dashboard”!</small>
+                                <small>Paul Burgess just purchased “{% raw %}{{cookiecutter.project_name}}{% endraw %} - Admin Dashboard”!</small>
                                 <p className="mb-0 pb-2">
                                     <small className="text-muted">5 minutes ago</small>
                                 </p>
@@ -249,7 +249,7 @@ const Widgets = (): React$Element<React$FragmentType> => {
     const transactionData = [
         {
             icon: 'mdi mdi-arrow-collapse-up',
-            title: 'Purchased Hyper Admin Template',
+            title: 'Purchased {% raw %}{{cookiecutter.project_name}}{% endraw %} Admin Template',
             time: 'Today',
             amount: '-$489.30',
             textClass: 'text-danger',
@@ -318,7 +318,7 @@ const Widgets = (): React$Element<React$FragmentType> => {
                 {/* chart based widget */}
                 <Col xl={4} lg={6}>
                     <StatisticsChartWidget2
-                        name="Hyper Sales"
+                        name="{% raw %}{{cookiecutter.project_name}}{% endraw %} Sales"
                         type="area"
                         title="$424,652"
                         subtitle="Sales"

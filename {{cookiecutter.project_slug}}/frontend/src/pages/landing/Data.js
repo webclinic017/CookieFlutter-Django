@@ -74,7 +74,7 @@ const features = [
     {
         id: 1,
         title: 'Inbuilt applications and pages',
-        desc: 'Hyper comes with a variety of ready-to-use applications and pages that help to speed up the development',
+        desc: '{% raw %}{{cookiecutter.project_name}}{% endraw %} comes with a variety of ready-to-use applications and pages that help to speed up the development',
         image: image1,
         features: [
             'Projects & Tasks',
@@ -86,7 +86,7 @@ const features = [
     {
         id: 2,
         title: 'Simply beautiful design',
-        desc: 'The simplest and fastest way to build dashboard or admin panel. Hyper is built using the latest tech and tools and provide an easy way to customize anything, including an overall color schemes, layout, etc.',
+        desc: 'The simplest and fastest way to build dashboard or admin panel. {% raw %}{{cookiecutter.project_name}}{% endraw %} is built using the latest tech and tools and provide an easy way to customize anything, including an overall color schemes, layout, etc.',
         image: image2,
         features: [
             'Built with latest Bootstrap',
@@ -158,8 +158,8 @@ const rawFaqs = [
     },
     {
         id: 4,
-        question: 'Will you regularly give updates of Hyper?',
-        answer: 'Yes, We will update the Hyper regularly. All the future updates would be available without any cost.',
+        question: 'Will you regularly give updates of {% raw %}{{cookiecutter.project_name}}{% endraw %}?',
+        answer: 'Yes, We will update the {% raw %}{{cookiecutter.project_name}}{% endraw %} regularly. All the future updates would be available without any cost.',
         titleClass: 'text-body',
         textClass: 'pb-1 text-muted',
     },

@@ -8,7 +8,7 @@ import MaskedInput from 'react-text-mask';
 
 // components
 import PageTitle from '../../components/PageTitle';
-import HyperDatepicker from '../../components/Datepicker';
+import Datepicker from '../../components/Datepicker';
 
 const ReactSelect = () => {
     return (
@@ -117,7 +117,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Single Date</label> <br />
-                            <HyperDatepicker
+                            <Datepicker
                                 hideAddon={true}
                                 value={selectedDate}
                                 onChange={(date) => {
@@ -129,7 +129,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Single Date with multiple months</label> <br />
-                            <HyperDatepicker
+                            <Datepicker
                                 hideAddon={true}
                                 monthsShown={2}
                                 value={selectedDate}
@@ -145,7 +145,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="form-group mb-3">
                             <label className="form-label">Custom date format</label> <br />
-                            <HyperDatepicker
+                            <Datepicker
                                 hideAddon={true}
                                 dateFormat="yyyy-MM-dd"
                                 value={selectedDate}
@@ -158,7 +158,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Specific date range</label> <br />
-                            <HyperDatepicker
+                            <Datepicker
                                 hideAddon={true}
                                 minDate={new Date()}
                                 maxDate={new Date(new Date().setDate(new Date().getDate() + 7))}
@@ -175,7 +175,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Select Time</label> <br />
-                            <HyperDatepicker
+                            <Datepicker
                                 hideAddon={true}
                                 showTimeSelect
                                 timeFormat="HH:mm"
@@ -192,7 +192,7 @@ const DatePickers = () => {
                     <Col lg={6}>
                         <div className="mb-3">
                             <label>Time only</label> <br />
-                            <HyperDatepicker
+                            <Datepicker
                                 hideAddon={true}
                                 showTimeSelect
                                 showTimeSelectOnly

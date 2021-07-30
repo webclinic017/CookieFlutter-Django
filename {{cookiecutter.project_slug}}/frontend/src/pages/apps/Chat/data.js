@@ -225,7 +225,7 @@ for (const user of users) {
             message: {
                 type: 'file',
                 value: {
-                    file: 'Hyper-admin.zip',
+                    file: 'admin.zip',
                     size: '2.3MB',
                 },
             },

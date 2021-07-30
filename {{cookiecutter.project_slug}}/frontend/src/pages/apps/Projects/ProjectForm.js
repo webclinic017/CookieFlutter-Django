@@ -8,7 +8,7 @@ import { Typeahead } from 'react-bootstrap-typeahead';
 
 // components
 import PageTitle from '../../../components/PageTitle';
-import HyperDatepicker from '../../../components/Datepicker';
+import Datepicker from '../../../components/Datepicker';
 import FileUploader from '../../../components/FileUploader';
 import { FormInput } from '../../../components/';
 
@@ -124,7 +124,7 @@ const ProjectForm = (): React$Element<React$FragmentType> => {
 
                                                 <Form.Group className="mb-3 position-relative">
                                                     <Form.Label>Start Date</Form.Label>
-                                                    <HyperDatepicker
+                                                    <Datepicker
                                                         className="form-control"
                                                         value={startDate}
                                                         onChange={(date) => setStartDate(date)}
@@ -188,7 +188,7 @@ const ProjectForm = (): React$Element<React$FragmentType> => {
 
                                                 <Form.Group className="mb-3">
                                                     <Form.Label>Due Date</Form.Label>
-                                                    <HyperDatepicker
+                                                    <Datepicker
                                                         className="form-control"
                                                         value={endDate}
                                                         onChange={(date) => setEndDate(date)}

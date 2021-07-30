@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 // components
-import HyperDatepicker from '../../../components/Datepicker';
+import Datepicker from '../../../components/Datepicker';
 
 import Statistics from './Statistics';
 import PerformanceChart from './PerformanceChart';
@@ -30,7 +30,7 @@ const EcommerceDashboard = (): React$Element<React$FragmentType> => {
                         <div className="page-title-right">
                             <form className="d-flex">
                                 <div className="input-group">
-                                    <HyperDatepicker
+                                    <Datepicker
                                         value={selectedDate}
                                         inputClass="form-control-light"
                                         onChange={(date) => {

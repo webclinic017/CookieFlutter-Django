@@ -61,7 +61,7 @@ const AccountLayout = ({ bottomLinks, children }: AccountLayoutProps): React$Ele
                             {t("It's a elegent templete. I love it very much! .")}{' '}
                             <i className="mdi mdi-format-quote-close"></i>
                         </p>
-                        <p>{t('- Hyper Admin User')}</p>
+                        <p>{t('- {% raw %}{{cookiecutter.project_name}}{% endraw %} Admin User')}</p>
                     </div>
                 </div>
             </div>
