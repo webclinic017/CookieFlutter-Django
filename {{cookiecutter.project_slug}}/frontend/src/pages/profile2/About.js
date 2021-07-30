@@ -59,7 +59,7 @@ const About = ({ projectDetails }: AboutProps): React$Element<React$FragmentType
                     <div className="timeline-item-info">
                         <h5 className="mt-0 mb-1">Graphic Designer</h5>
                         <p className="font-14">
-                        {{cookiecutter.author }}  <span className="ms-2 font-12">Year: 2010 - 12</span>
+                        {{cookiecutter.author_name }}  <span className="ms-2 font-12">Year: 2010 - 12</span>
                         </p>
                         <p className="text-muted mt-2 mb-0 pb-2">
                             The European languages are members of the same family. Their separate existence is a myth.

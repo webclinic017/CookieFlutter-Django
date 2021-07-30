@@ -76,7 +76,7 @@ const recentFiles = [
     {
         name: 'sketch-design.zip',
         modifiedDate: 'Feb 13, 2020',
-        modifiedBy: '{{cookiecutter.author }}',
+        modifiedBy: '{{cookiecutter.author_name }}',
         size: '521 MB',
         owner: 'Coder Themes',
         members: [

@@ -12,7 +12,7 @@ const tasks = [
         project: '{{cookiecutter.project_name}}',
         totalComments: 28,
         totalSubTasks: 10,
-        user: '{{cookiecutter.author }}',
+        user: '{{cookiecutter.author_name }}',
         dueDate: 'Jul 18, 2019',
     },
     {
@@ -24,7 +24,7 @@ const tasks = [
         project: '{{cookiecutter.project_name}}',
         totalComments: 21,
         totalSubTasks: 7,
-        user: '{{cookiecutter.author }}2',
+        user: '{{cookiecutter.author_name }}2',
         dueDate: 'Jul 20, 2019',
     },
     {
@@ -36,7 +36,7 @@ const tasks = [
         project: '{{cookiecutter.project_name}}2',
         totalComments: 24,
         totalSubTasks: 2,
-        user: '{{cookiecutter.author }}',
+        user: '{{cookiecutter.author_name }}',
         dueDate: 'Jul 21, 2019',
     },
     {
@@ -48,7 +48,7 @@ const tasks = [
         project: '{{cookiecutter.project_name}}2',
         totalComments: 21,
         totalSubTasks: 5,
-        user: '{{cookiecutter.author }}2',
+        user: '{{cookiecutter.author_name }}2',
         dueDate: 'Jul 22, 2019',
     },
     {
@@ -60,7 +60,7 @@ const tasks = [
         project: '{{cookiecutter.project_name}}',
         totalComments: 2,
         totalSubTasks: 0,
-        user: '{{cookiecutter.author }}3',
+        user: '{{cookiecutter.author_name }}3',
         dueDate: 'Jul 18, 2019',
     },
     {
@@ -72,7 +72,7 @@ const tasks = [
         project: '{{cookiecutter.project_name}}2',
         totalComments: 24,
         totalSubTasks: 8,
-        user: '{{cookiecutter.author }}',
+        user: '{{cookiecutter.author_name }}',
         dueDate: 'Jul 21, 2019',
     },
     {
@@ -84,7 +84,7 @@ const tasks = [
         project: '{{cookiecutter.project_name}}',
         totalComments: 11,
         totalSubTasks: 6,
-        user: '{{cookiecutter.author }}',
+        user: '{{cookiecutter.author_name }}',
         dueDate: 'Jul 10, 2019',
     },
     {
@@ -96,7 +96,7 @@ const tasks = [
         project: '{{cookiecutter.project_name}}2',
         totalComments: 10,
         totalSubTasks: 4,
-        user: '{{cookiecutter.author }}2',
+        user: '{{cookiecutter.author_name }}2',
         dueDate: 'Jul 24, 2019',
     },
 ];

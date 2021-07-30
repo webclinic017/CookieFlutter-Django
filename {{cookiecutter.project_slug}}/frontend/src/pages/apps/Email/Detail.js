@@ -259,7 +259,7 @@ const EmailDetail = (): React$Element<React$FragmentType> => {
                                         </div>
                                     </div>
 
-                                    <p>Hi {{cookiecutter.author }}!</p>
+                                    <p>Hi {{cookiecutter.author_name }}!</p>
                                     <p>
                                         Clicking ‘Order Service’ on the right-hand side of the above page will present
                                         you with an order page. This service has the following Briefing Guidelines that

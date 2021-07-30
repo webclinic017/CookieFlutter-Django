@@ -123,7 +123,7 @@ const Footer = (): React$Element<React$FragmentType> => {
                         <Col>
                             <div className="mt-5">
                                 <p className="text-muted mt-4 text-center mb-0">
-                                    © 2018 - 2021 {{cookiecutter.project_name}}. Design and coded by {{cookiecutter.author }}
+                                    © 2018 - 2021 {{cookiecutter.project_name}}. Design and coded by {{cookiecutter.author_name }}
                                 </p>
                             </div>
                         </Col>
