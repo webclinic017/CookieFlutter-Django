@@ -15,9 +15,7 @@ from {{ cookiecutter.project_slug }}.users.api.views import *
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-    path(
-        "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
-    ),
+    path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
     # Django Admin, use {% raw %}{% url 'admin:index' %}{% endraw %}
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
@@ -38,16 +36,9 @@ urlpatterns += [
     # DRF auth token
     path("api/auth-token/", obtain_auth_token),
 
-    path('api/user/', UserDetailsAPIView.as_view(), name='rest_user_details'),
-    path('api/login/', LoginUserView.as_view(), name='account_login'),
-    path('api/password/change/', PasswordUserChangeView.as_view(), name='rest_password_change'),
-    path('api/password/reset/', PasswordResetUserView.as_view(), name='rest_password_reset'),
-    path('api/', include('rest_auth.urls')),
-    path('api/registration/', RegisterUserView.as_view(), name='account_signup'),
+    #https://django-rest-auth.readthedocs.io/en/latest/api_endpoints.html
+    path('api/rest-auth/', include('rest_auth.urls')),
     path('api/rest-auth/registration/', include('rest_auth.registration.urls')),
-    path('api/account-confirm-email/<str:key>/', VerifyUserEmailView.as_view(), name='account_confirm_email'),
-    path('api/password/reset/confirm/<str:uid>/<str:token>/', PasswordResetConfirmUserView.as_view(), name='rest_password_reset_confirm'),
-    path('api/logout/', LogoutView.as_view(), name='rest_logout'),
 
 
 ]

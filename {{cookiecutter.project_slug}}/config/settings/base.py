@@ -83,6 +83,8 @@ THIRD_PARTY_APPS = [
 {%- if cookiecutter.use_drf == "y" %}
     "rest_framework",
     "rest_framework.authtoken",
+    'rest_auth', # https://django-rest-auth.readthedocs.io/en/latest/installation.html
+    'rest_auth.registration',
     "corsheaders",
 {%- endif %}
 ]
@@ -329,6 +331,8 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
 }
+
+REST_USE_JWT = True
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
 CORS_URLS_REGEX = r"^/api/.*$"
