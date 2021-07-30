@@ -44,6 +44,7 @@ djangorestframework==3.12.4  # https://github.com/encode/django-rest-framework
 django-cors-headers==3.7.0 # https://github.com/adamchainz/django-cors-headers
 django-rest-auth==0.9.5
 djangorestframework-jwt==1.11.0
+django-rest-swagger
 {%- endif %}
 
 

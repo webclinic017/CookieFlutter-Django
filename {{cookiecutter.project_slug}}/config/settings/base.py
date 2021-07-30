@@ -86,6 +86,7 @@ THIRD_PARTY_APPS = [
     'rest_auth', # https://django-rest-auth.readthedocs.io/en/latest/installation.html
     'rest_auth.registration',
     "corsheaders",
+    'rest_framework_swagger',
 {%- endif %}
 ]
 
@@ -333,9 +334,21 @@ REST_FRAMEWORK = {
 }
 
 REST_USE_JWT = True
+REST_SESSION_LOGIN = True
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
 CORS_URLS_REGEX = r"^/api/.*$"
+CORS_ORIGIN_WHITELIST = [
+    'http://0.0.0.0:3000',
+    'http://0.0.0.0:8000',
+]
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+
+SWAGGER_SETTINGS = {
+    'LOGIN_URL': 'login',
+    'LOGOUT_URL': 'logout',
+}
 
 {%- endif %}
 # Your stuff...
