@@ -41,7 +41,7 @@ const Calendar = (): React$Element<any> => {
                                 <p className="text-muted mb-1 font-13">
                                     <i className="mdi mdi-calendar"></i> 10:30 AM - 11:45 AM
                                 </p>
-                                <h5>Design Review - {% raw %}{{cookiecutter.project_name}}{% endraw %} Admin</h5>
+                                <h5>Design Review - {{cookiecutter.project_name}} Admin</h5>
                             </li>
                             <li className="mb-4">
                                 <p className="text-muted mb-1 font-13">

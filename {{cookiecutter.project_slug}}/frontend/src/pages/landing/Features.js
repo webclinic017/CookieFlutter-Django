@@ -28,7 +28,7 @@ const Features = ({ features }: FeaturesProps): React$Element<React$FragmentType
                                     Features you'll <span className="text-danger">love</span>
                                 </h3>
                                 <p className="text-muted mt-2">
-                                    {% raw %}{{cookiecutter.project_name}}{% endraw %} comes with next generation ui design and have multiple benefits
+                                    {{cookiecutter.project_name}} comes with next generation ui design and have multiple benefits
                                 </p>
                             </div>
                         </Col>

@@ -49,7 +49,7 @@ const ServerError = (): React$Element<React$FragmentType> => {
                 </div>
             </div>
 
-            <footer className="footer footer-alt">2018 - 2021 © {% raw %}{{cookiecutter.project_name}}{% endraw %} - Coderthemes.com</footer>
+            <footer className="footer footer-alt">2018 - 2021 © {{cookiecutter.project_name}} - Coderthemes.com</footer>
         </React.Fragment>
     );
 };

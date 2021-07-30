@@ -200,7 +200,7 @@ const Projects = (): React$Element<React$FragmentType> => {
         },
         {
             id: 3,
-            title: '{% raw %}{{cookiecutter.project_name}}{% endraw %} v2.1 - Angular and Django',
+            title: '{{cookiecutter.project_name}} v2.1 - Angular and Django',
             state: 'Ongoing',
             shortDesc: 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid',
             totalTasks: 12,
@@ -210,7 +210,7 @@ const Projects = (): React$Element<React$FragmentType> => {
         },
         {
             id: 4,
-            title: '{% raw %}{{cookiecutter.project_name}}{% endraw %} v2.1 - React, Webpack',
+            title: '{{cookiecutter.project_name}} v2.1 - React, Webpack',
             state: 'Finished',
             shortDesc: "Some quick example text to build on the card title and make up the bulk of the card's content",
             totalTasks: 50,
@@ -220,7 +220,7 @@ const Projects = (): React$Element<React$FragmentType> => {
         },
         {
             id: 5,
-            title: '{% raw %}{{cookiecutter.project_name}}{% endraw %} 2.2 - Vue.Js and Laravel',
+            title: '{{cookiecutter.project_name}} 2.2 - Vue.Js and Laravel',
             state: 'Ongoing',
             image: projectImg1,
             shortDesc:
@@ -232,7 +232,7 @@ const Projects = (): React$Element<React$FragmentType> => {
         },
         {
             id: 6,
-            title: '{% raw %}{{cookiecutter.project_name}}{% endraw %} 2.3 - Rails, NodeJs, Mean',
+            title: '{{cookiecutter.project_name}} 2.3 - Rails, NodeJs, Mean',
             state: 'Planned',
             image: projectImg2,
             shortDesc:
@@ -244,7 +244,7 @@ const Projects = (): React$Element<React$FragmentType> => {
         },
         {
             id: 7,
-            title: '{% raw %}{{cookiecutter.project_name}}{% endraw %} - Landing page and UI Kit',
+            title: '{{cookiecutter.project_name}} - Landing page and UI Kit',
             state: 'Planned',
             image: projectImg3,
             shortDesc:
@@ -256,7 +256,7 @@ const Projects = (): React$Element<React$FragmentType> => {
         },
         {
             id: 8,
-            title: '{% raw %}{{cookiecutter.project_name}}{% endraw %} 3.0 - Scoping',
+            title: '{{cookiecutter.project_name}} 3.0 - Scoping',
             state: 'Finished',
             image: projectImg4,
             shortDesc:

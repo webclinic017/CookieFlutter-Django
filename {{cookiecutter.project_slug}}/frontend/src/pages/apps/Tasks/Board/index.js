@@ -376,7 +376,7 @@ const Kanban = (): React$Element<React$FragmentType> => {
                                 errors={errors}
                                 control={control}>
                                 <option>Select</option>
-                                <option>{% raw %}{{cookiecutter.project_name}}{% endraw %}</option>
+                                <option>{{cookiecutter.project_name}}</option>
                                 <option>CRM</option>
                                 <option>iOS App</option>
                             </FormInput>

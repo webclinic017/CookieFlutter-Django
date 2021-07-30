@@ -23,7 +23,7 @@ const PageTitle = (props: PageTitleProps): React$Element<any> => {
                 <div className="page-title-box">
                     <div className="page-title-right">
                         <Breadcrumb className="m-0">
-                            <Breadcrumb.Item href="/">{% raw %}{{cookiecutter.project_name}}{% endraw %}</Breadcrumb.Item>
+                            <Breadcrumb.Item href="/">{{cookiecutter.project_name}}</Breadcrumb.Item>
 
                             {props.breadCrumbItems.map((item, index) => {
                                 return item.active ? (

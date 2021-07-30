@@ -33,7 +33,7 @@ const Activity = (): React$Element<any> => {
                                 <a href="/" className="text-info fw-bold mb-1 d-block">
                                     You sold an item
                                 </a>
-                                <small>Paul Burgess just purchased “{% raw %}{{cookiecutter.project_name}}{% endraw %} - Admin Dashboard”!</small>
+                                <small>Paul Burgess just purchased “{{cookiecutter.project_name}} - Admin Dashboard”!</small>
                                 <p className="mb-0 pb-2">
                                     <small className="text-muted">5 minutes ago</small>
                                 </p>
