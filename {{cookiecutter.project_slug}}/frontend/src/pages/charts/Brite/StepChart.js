@@ -32,7 +32,7 @@ const StepChart = (): React$Element<any> => {
                     <ResponsiveStepChart
                         data={stepData}
                         height={300}
-                        margin={{ top: 40, right: 40, bottom: 80, left: 50 }}
+                        margin={% raw %}{{ top: 40, right: 40, bottom: 80, left: 50 }}{% endraw %}
                     />
                 </div>
             </Card.Body>

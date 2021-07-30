@@ -79,7 +79,7 @@ const DisabledElements = () => {
                 </p>
                 <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Tooltip!</Tooltip>}>
                     <span className="d-inline-block">
-                        <Button disabled style={{ pointerEvents: 'none' }}>
+                        <Button disabled style={% raw %}{{ pointerEvents: 'none' }}>{% endraw %}
                             Disabled button
                         </Button>
                     </span>

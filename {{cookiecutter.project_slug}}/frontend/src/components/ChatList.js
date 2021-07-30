@@ -176,7 +176,7 @@ const ChatList = (props: ChatListProps, state: ChatListState): React$Element<any
 
                     <div className="chat-conversation">
                         {/* chat messages */}
-                        <SimpleBar style={{ maxHeight: '350px', width: '100%' }}>
+                        <SimpleBar style={% raw %}{{ maxHeight: '350px', width: '100%' }}{% endraw %}>
                             <ul className={classNames('conversation-list', props.className)}>
                                 {messages.map((message, i) => {
                                     return (

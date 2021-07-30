@@ -181,7 +181,7 @@ const Cart = (): React$Element<React$FragmentType> => {
                                                     <th>Price</th>
                                                     <th>Quantity</th>
                                                     <th>Total</th>
-                                                    <th style={{ width: '50px' }}></th>
+                                                    <th style={% raw %}{{ width: '50px' }}{% endraw %}></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -218,7 +218,7 @@ const Cart = (): React$Element<React$FragmentType> => {
                                                                     value={item.qty}
                                                                     className="form-control"
                                                                     placeholder="Qty"
-                                                                    style={{ width: '90px' }}
+                                                                    style={% raw %}{{ width: '90px' }}{% endraw %}
                                                                     onChange={(e) => {
                                                                         onQtyChange(e, item);
                                                                     }}

@@ -167,7 +167,7 @@ const ChatArea = ({ selectedUser }: ChatAreaProps): React$Element<React$Fragment
                 <Card.Body className="position-relative">
                     {loading && <Loader />}
 
-                    <SimpleBar style={{ height: '556px', width: '100%' }}>
+                    <SimpleBar style={% raw %}{{ height: '556px', width: '100%' }}{% endraw %}>
                         <ul className="conversation-list">
                             {userMessages.map((message, index) => {
                                 return <UserMessage key={index} message={message} toUser={toUser} />;

@@ -83,7 +83,7 @@ const Register = (): React$Element<React$FragmentType> => {
                     </Alert>
                 )}
 
-                <VerticalForm onSubmit={onSubmit} resolver={schemaResolver} defaultValues={{}}>
+                <VerticalForm onSubmit={onSubmit} resolver={schemaResolver} defaultValues={% raw %}{{}}{% endraw %}>
                     <FormInput
                         label={t('Full Name')}
                         type="text"

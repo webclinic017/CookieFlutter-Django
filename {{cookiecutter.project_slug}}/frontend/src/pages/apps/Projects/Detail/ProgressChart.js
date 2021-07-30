@@ -92,7 +92,7 @@ const ProgressChart = (): React$Element<any> => {
         <Card>
             <Card.Body>
                 <h5 className="card-title mb-3">Progress</h5>
-                <div className="mt-3 chartjs-chart" style={{ height: '320px' }}>
+                <div className="mt-3 chartjs-chart" style={% raw %}{{ height: '320px' }}{% endraw %}>
                     <Line data={chartData} options={chartOpts} />
                 </div>
             </Card.Body>

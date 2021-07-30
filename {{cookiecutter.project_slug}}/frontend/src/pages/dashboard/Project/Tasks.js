@@ -47,7 +47,7 @@ const Tasks = (): React$Element<any> => {
                                 <span className="text-muted font-13">Total time spend</span>
                                 <h5 className="font-14 mt-1 fw-normal">3h 20min</h5>
                             </td>
-                            <td className="table-action" style={{ width: '90px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '90px' }}>{% endraw %}
                                 <a href="/" className="action-icon">
                                     {' '}
                                     <i className="mdi mdi-pencil"></i>
@@ -79,7 +79,7 @@ const Tasks = (): React$Element<any> => {
                                 <span className="text-muted font-13">Total time spend</span>
                                 <h5 className="font-14 mt-1 fw-normal">12h 21min</h5>
                             </td>
-                            <td className="table-action" style={{ width: '90px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '90px' }}>{% endraw %}
                                 <a href="/" className="action-icon">
                                     {' '}
                                     <i className="mdi mdi-pencil"></i>
@@ -111,7 +111,7 @@ const Tasks = (): React$Element<any> => {
                                 <span className="text-muted font-13">Total time spend</span>
                                 <h5 className="font-14 mt-1 fw-normal">78h 05min</h5>
                             </td>
-                            <td className="table-action" style={{ width: '90px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '90px' }}>{% endraw %}
                                 <a href="/" className="action-icon">
                                     {' '}
                                     <i className="mdi mdi-pencil"></i>
@@ -143,7 +143,7 @@ const Tasks = (): React$Element<any> => {
                                 <span className="text-muted font-13">Total time spend</span>
                                 <h5 className="font-14 mt-1 fw-normal">26h 58min</h5>
                             </td>
-                            <td className="table-action" style={{ width: '90px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '90px' }}>{% endraw %}
                                 <a href="/" className="action-icon">
                                     {' '}
                                     <i className="mdi mdi-pencil"></i>

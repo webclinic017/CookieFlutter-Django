@@ -123,7 +123,7 @@ const ProductDetails = (): React$Element<React$FragmentType> => {
                                         <img
                                             src={selectedProductImg}
                                             className="img-fluid"
-                                            style={{ maxWidth: '280px' }}
+                                            style={% raw %}{{ maxWidth: '280px' }}{% endraw %}
                                             alt="Product-img"
                                         />
                                     </Link>
@@ -140,7 +140,7 @@ const ProductDetails = (): React$Element<React$FragmentType> => {
                                             <img
                                                 src={productImg1}
                                                 className="img-fluid img-thumbnail p-2"
-                                                style={{ maxWidth: '75px' }}
+                                                style={% raw %}{{ maxWidth: '75px' }}{% endraw %}
                                                 alt="Product-img"
                                             />
                                         </Link>
@@ -156,7 +156,7 @@ const ProductDetails = (): React$Element<React$FragmentType> => {
                                             <img
                                                 src={productImg2}
                                                 className="img-fluid img-thumbnail p-2"
-                                                style={{ maxWidth: '75px' }}
+                                                style={% raw %}{{ maxWidth: '75px' }}{% endraw %}
                                                 alt="Product-img"
                                             />
                                         </Link>
@@ -172,7 +172,7 @@ const ProductDetails = (): React$Element<React$FragmentType> => {
                                             <img
                                                 src={productImg3}
                                                 className="img-fluid img-thumbnail p-2"
-                                                style={{ maxWidth: '75px' }}
+                                                style={% raw %}{{ maxWidth: '75px' }}{% endraw %}
                                                 alt="Product-img"
                                             />
                                         </Link>
@@ -188,7 +188,7 @@ const ProductDetails = (): React$Element<React$FragmentType> => {
                                             <img
                                                 src={productImg4}
                                                 className="img-fluid img-thumbnail p-2"
-                                                style={{ maxWidth: '75px' }}
+                                                style={% raw %}{{ maxWidth: '75px' }}{% endraw %}
                                                 alt="Product-img"
                                             />
                                         </Link>
@@ -226,7 +226,7 @@ const ProductDetails = (): React$Element<React$FragmentType> => {
                                                     value={initialQtyToBuy}
                                                     className="form-control"
                                                     placeholder="Qty"
-                                                    style={{ width: '90px' }}
+                                                    style={% raw %}{{ width: '90px' }}{% endraw %}
                                                     onChange={(e) => {
                                                         setInitialQtyToBuy(e.target.value);
                                                     }}

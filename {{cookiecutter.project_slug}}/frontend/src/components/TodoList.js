@@ -165,7 +165,7 @@ const TodoList = ({ addTodo, height }: TodoListProps, state: TodoListState): Rea
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <SimpleBar style={{ maxHeight: height }}>
+                                        <SimpleBar style={% raw %}{{ maxHeight: height }}{% endraw %}>
                                             <ul className="list-group list-group-flush todo-list" id="todo-list">
                                                 {todoData.map((todo, index) => {
                                                     return (
@@ -243,7 +243,7 @@ const TodoList = ({ addTodo, height }: TodoListProps, state: TodoListState): Rea
                         ) : (
                             <Row>
                                 <Col>
-                                    <SimpleBar style={{ maxHeight: height }}>
+                                    <SimpleBar style={% raw %}{{ maxHeight: height }}{% endraw %}>
                                         <ul className="list-group list-group-flush todo-list" id="todo-list">
                                             {todoData.map((todo, index) => {
                                                 return (

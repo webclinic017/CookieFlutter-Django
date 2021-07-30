@@ -106,8 +106,8 @@ const DefaultToasts = () => {
                             <div
                                 aria-live="polite"
                                 aria-atomic="true"
-                                style={{ position: 'relative', minHeight: '200px' }}>
-                                <div className="toast-container" style={{ position: 'absolute', top: 0, right: 0 }}>
+                                style={% raw %}{{ position: 'relative', minHeight: '200px' }}>{% endraw %}
+                                <div className="toast-container" style={% raw %}{{ position: 'absolute', top: 0, right: 0 }}>{% endraw %}
                                     {stacked.map((item, index) => {
                                         return (
                                             <Toast key={index} onClose={() => handleClose(index)}>
@@ -138,7 +138,7 @@ const DefaultToasts = () => {
                                 aria-live="polite"
                                 aria-atomic="true"
                                 className="d-flex justify-content-center align-items-center"
-                                style={{ minHeight: '200px' }}>
+                                style={% raw %}{{ minHeight: '200px' }}>{% endraw %}
                                 <Toast onClose={() => setShowPlacement(false)} show={showPlacement}>
                                     <Toast.Header>
                                         <img src={logo} alt="brand-logo" height="12" className="me-1" />
@@ -181,7 +181,7 @@ const DefaultToasts = () => {
                                     aria-live="polite"
                                     aria-atomic="true"
                                     className="bg-light position-relative"
-                                    style={{ minHeight: '294px' }}>
+                                    style={% raw %}{{ minHeight: '294px' }}>{% endraw %}
                                     <ToastContainer className="p-3" position={position}>
                                         <Toast>
                                             <Toast.Header closeButton={false}>

@@ -105,7 +105,7 @@ const TasksChart = (): React$Element<any> => {
                 <h4 className="header-title mb-4">Tasks Overview</h4>
 
                 <div dir="ltr">
-                    <div style={{ height: '320px' }} className="mt-3 chartjs-chart">
+                    <div style={% raw %}{{ height: '320px' }}{% endraw %} className="mt-3 chartjs-chart">
                         <Bar data={barChartData} options={barChartOpts} />
                     </div>
                 </div>

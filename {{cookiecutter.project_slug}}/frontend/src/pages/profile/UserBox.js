@@ -15,7 +15,7 @@ const UserBox = (): React$Element<any> => {
                                 <div className="avatar-lg">
                                     <img
                                         src={profileImg}
-                                        style={{ height: '100px' }}
+                                        style={% raw %}{{ height: '100px' }}{% endraw %}
                                         alt=""
                                         className="rounded-circle img-thumbnail"
                                     />

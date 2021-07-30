@@ -60,7 +60,7 @@ const RightSideBar = (props: RightSideBarProps): React$Element<React$FragmentTyp
                     <h5 className="m-0">{title}</h5>
                 </div>
 
-                <SimpleBar style={{ maxHeight: '100%', zIndex: 10000 }} timeout={500} scrollbarMaxSize={320}>
+                <SimpleBar style={% raw %}{{ maxHeight: '100%', zIndex: 10000 }}{% endraw %} timeout={500} scrollbarMaxSize={320}>
                     <div className="rightbar-content h-100">{component}</div>
                 </SimpleBar>
             </div>

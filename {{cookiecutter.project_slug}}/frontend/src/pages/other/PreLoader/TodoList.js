@@ -72,7 +72,7 @@ const TodoList = (): React$Element<React$FragmentType> => {
                     <div className="todoapp">
                         <Row>
                             <Col>
-                                <SimpleBar style={{ maxHeight: '224px', width: '100%' }}>
+                                <SimpleBar style={% raw %}{{ maxHeight: '224px', width: '100%' }}>{% endraw %}
                                     <ul className="list-group list-group-flush todo-list" id="todo-list">
                                         {todoData.map((todo, index) => {
                                             return (

@@ -16,7 +16,7 @@ const Social = (): React$Element<any> => {
                         <tr>
                             <th>Network</th>
                             <th>Visits</th>
-                            <th style={{ width: '40%' }}>&nbsp;</th>
+                            <th style={% raw %}{{ width: '40%' }}{% endraw %}>&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,28 +24,28 @@ const Social = (): React$Element<any> => {
                             <td>Facebook</td>
                             <td>2,250</td>
                             <td>
-                                <ProgressBar now={65} style={{ height: '3px' }} />
+                                <ProgressBar now={65} style={% raw %}{{ height: '3px' }}{% endraw %} />
                             </td>
                         </tr>
                         <tr>
                             <td>Instagram</td>
                             <td>1,501</td>
                             <td>
-                                <ProgressBar now={45} style={{ height: '3px' }} />
+                                <ProgressBar now={45} style={% raw %}{{ height: '3px' }} {% endraw %}/>
                             </td>
                         </tr>
                         <tr>
                             <td>Twitter</td>
                             <td>750</td>
                             <td>
-                                <ProgressBar now={30} style={{ height: '3px' }} />
+                                <ProgressBar now={30} style={% raw %}{{ height: '3px' }} {% endraw %}/>
                             </td>
                         </tr>
                         <tr>
                             <td>LinkedIn</td>
                             <td>540</td>
                             <td>
-                                <ProgressBar now={25} style={{ height: '3px' }} />
+                                <ProgressBar now={25} style={% raw %}{{ height: '3px' }} {% endraw %}/>
                             </td>
                         </tr>
                     </tbody>

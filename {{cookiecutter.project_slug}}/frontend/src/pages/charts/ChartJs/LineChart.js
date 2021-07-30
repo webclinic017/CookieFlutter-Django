@@ -88,7 +88,7 @@ const LineChart = (): React$Element<any> => {
         <Card>
             <Card.Body>
                 <h4 className="header-title mb-3">Line Chart</h4>
-                <div style={{ height: '320px' }} className="mt-3 chartjs-chart">
+                <div style={% raw %}{{ height: '320px' }}{% endraw %} className="mt-3 chartjs-chart">
                     <Line data={lineChartData} options={lineChartOpts} />
                 </div>
             </Card.Body>

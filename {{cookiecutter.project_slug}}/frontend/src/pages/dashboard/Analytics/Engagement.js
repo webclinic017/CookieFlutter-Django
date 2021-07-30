@@ -15,8 +15,8 @@ const Engagement = (): React$Element<any> => {
                     <thead className="table-light">
                         <tr>
                             <th>Duration (Secs)</th>
-                            <th style={{ width: '30%' }}>Sessions</th>
-                            <th style={{ width: '3    0%' }}>Views</th>
+                            <th style={% raw %}{{ width: '30%' }}{% endraw %}>Sessions</th>
+                            <th style={% raw %}{{ width: '3    0%' }}{% endraw %}>Views</th>
                         </tr>
                     </thead>
                     <tbody>

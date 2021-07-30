@@ -50,7 +50,7 @@ const DonutChart = (): React$Element<any> => {
             <Card.Body>
                 <h4 className="header-title mb-3">Donut Chart</h4>
 
-                <div className="mb-5 mt-4 chartjs-chart" style={{ height: '320px', maxWidth: '320px' }}>
+                <div className="mb-5 mt-4 chartjs-chart" style={% raw %}{{ height: '320px', maxWidth: '320px' }}{% endraw %}>
                     <Doughnut data={donutChartData} options={donutChartOpts} />
                 </div>
             </Card.Body>

@@ -93,14 +93,14 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                             <RussiaVectorMap
                                 height="300px"
                                 width="100%"
-                                options={{
+                                options={% raw %}{{
                                     zoomOnScroll: false,
                                     regionStyle: {
                                         initial: {
                                             fill: '#727cf5',
                                         },
                                     },
-                                }}
+                                }}{% endraw %}
                             />
                         </Card.Body>
                     </Card>
@@ -112,7 +112,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                             <SpainVectorMap
                                 height="300px"
                                 width="100%"
-                                options={{
+                                options={% raw %}{{
                                     zoomOnScroll: false,
                                     backgroundColor: 'transparent',
                                     regionStyle: {
@@ -120,7 +120,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                                             fill: '#6c757d',
                                         },
                                     },
-                                }}
+                                }}{% endraw %}
                             />
                         </Card.Body>
                     </Card>
@@ -135,7 +135,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                             <CanadaVectorMap
                                 height="300px"
                                 width="100%"
-                                options={{
+                                options={% raw %}{{
                                     zoomOnScroll: false,
                                     backgroundColor: 'transparent',
                                     regionStyle: {
@@ -143,7 +143,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                                             fill: '#0acf97',
                                         },
                                     },
-                                }}
+                                }}{% endraw %}
                             />
                         </Card.Body>
                     </Card>
@@ -155,7 +155,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                             <UsaVectorMap
                                 height="300px"
                                 width="100%"
-                                options={{
+                                options={% raw %}{{
                                     zoomOnScroll: false,
                                     backgroundColor: 'transparent',
                                     regionStyle: {
@@ -163,7 +163,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                                             fill: '#39afd1',
                                         },
                                     },
-                                }}
+                                }}{% endraw %}
                             />
                         </Card.Body>
                     </Card>
@@ -178,7 +178,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                             <ItalyVectorMap
                                 height="300px"
                                 width="100%"
-                                options={{
+                                options={% raw %}{{
                                     zoomOnScroll: false,
                                     backgroundColor: 'transparent',
                                     regionStyle: {
@@ -186,7 +186,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                                             fill: '#fa5c7c',
                                         },
                                     },
-                                }}
+                                }}{% endraw %}
                             />
                         </Card.Body>
                     </Card>
@@ -198,7 +198,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                             <IraqVectorMap
                                 height="300px"
                                 width="100%"
-                                options={{
+                                options={% raw %}{{
                                     zoomOnScroll: false,
                                     backgroundColor: 'transparent',
                                     regionStyle: {
@@ -206,7 +206,7 @@ const VectorMaps = (): React$Element<React$FragmentType> => {
                                             fill: '#ffbc00',
                                         },
                                     },
-                                }}
+                                }}{% endraw %}
                             />
                         </Card.Body>
                     </Card>

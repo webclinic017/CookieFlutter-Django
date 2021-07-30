@@ -215,7 +215,7 @@ const OrderDetails = (): React$Element<React$FragmentType> => {
                                     </div>
                                 </div>
 
-                                <div className="process-line" style={{ width: '33%' }}></div>
+                                <div className="process-line" style={% raw %}{{ width: '33%' }}{% endraw %}></div>
                             </div>
                         </Col>
                     </Row>

@@ -99,7 +99,7 @@ const DisabledPopover = () => {
                 </p>
                 <OverlayTrigger placement="right" overlay={popover}>
                     <span className="d-inline-block">
-                        <Button disabled style={{ pointerEvents: 'none' }}>
+                        <Button disabled style={% raw %}{{ pointerEvents: 'none' }}>{% endraw %}
                             Disabled button
                         </Button>
                     </span>

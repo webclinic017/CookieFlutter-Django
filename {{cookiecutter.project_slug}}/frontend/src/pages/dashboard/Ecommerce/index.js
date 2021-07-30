@@ -71,13 +71,13 @@ const EcommerceDashboard = (): React$Element<React$FragmentType> => {
             </Row>
 
             <Row>
-                <Col xl={{ span: 6, order: 1 }} lg={{ order: 2 }}>
+                <Col xl={% raw %}{{ span: 6, order: 1 }}{% endraw %} lg={% raw %}{{ order: 2 }}>{% endraw %}
                     <Products />
                 </Col>
-                <Col xl={3} lg={{ span: 6, order: 1 }}>
+                <Col xl={3} lg={% raw %}{{ span: 6, order: 1 }}>{% endraw %}
                     <SalesChart />
                 </Col>
-                <Col xl={3} lg={{ span: 6, order: 1 }}>
+                <Col xl={3} lg={% raw %}{{ span: 6, order: 1 }}>{% endraw %}
                     <Activity />
                 </Col>
             </Row>

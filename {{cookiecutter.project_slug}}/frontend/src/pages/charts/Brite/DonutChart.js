@@ -40,7 +40,7 @@ const DonutChart = (): React$Element<any> => {
                                         width={250}
                                         numberFormat={'s'}
                                         colorSchema={['#727cf5', '#0acf97', '#6c757d', '#fa5c7c', '#ffbc00', '#39afd1']}
-                                        margin={{ top: 10, bottom: 10, left: 0, right: 30 }}
+                                        margin={% raw %}{{ top: 10, bottom: 10, left: 0, right: 30 }}{% endraw %}
                                     />
                                 </Col>
                             </Row>

@@ -15,12 +15,12 @@ const Statistics = (): React$Element<React$FragmentType> => {
                         description="Number of Customers"
                         title="Customers"
                         stats="36,254"
-                        trend={{
+                        trend={% raw %}{{
                             textClass: 'text-success',
                             icon: 'mdi mdi-arrow-up-bold',
                             value: '5.27%',
                             time: 'Since last month',
-                        }}></StatisticsWidget>
+                        }}></StatisticsWidget>{% endraw %}
                 </Col>
 
                 <Col lg={6}>
@@ -29,12 +29,12 @@ const Statistics = (): React$Element<React$FragmentType> => {
                         description="Number of Orders"
                         title="Orders"
                         stats="5,543"
-                        trend={{
+                        trend={% raw %}{{
                             textClass: 'text-danger',
                             icon: 'mdi mdi-arrow-down-bold',
                             value: '1.08%',
                             time: 'Since last month',
-                        }}></StatisticsWidget>
+                        }}></StatisticsWidget>{% endraw %}
                 </Col>
             </Row>
 
@@ -45,12 +45,12 @@ const Statistics = (): React$Element<React$FragmentType> => {
                         description="Revenue"
                         title="Revenue"
                         stats="$6,254"
-                        trend={{
+                        trend={% raw %}{{
                             textClass: 'text-danger',
                             icon: 'mdi mdi-arrow-down-bold',
                             value: '7.00%',
                             time: 'Since last month',
-                        }}></StatisticsWidget>
+                        }}></StatisticsWidget>{% endraw %}
                 </Col>
 
                 <Col lg={6}>
@@ -59,12 +59,12 @@ const Statistics = (): React$Element<React$FragmentType> => {
                         description="Growth"
                         title="Growth"
                         stats="+ 30.56%"
-                        trend={{
+                        trend={% raw %}{{
                             textClass: 'text-success',
                             icon: 'mdi mdi-arrow-up-bold',
                             value: '4.87%',
                             time: 'Since last month',
-                        }}></StatisticsWidget>
+                        }}></StatisticsWidget>{% endraw %}
                 </Col>
             </Row>
         </React.Fragment>

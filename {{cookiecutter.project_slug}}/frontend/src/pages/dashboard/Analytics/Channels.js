@@ -16,7 +16,7 @@ const Channels = (): React$Element<any> => {
                         <tr>
                             <th>Channel</th>
                             <th>Visits</th>
-                            <th style={{ width: '40%' }}>&nbsp;</th>
+                            <th style={% raw %}{{ width: '40%' }}{% endraw %}>&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,28 +24,28 @@ const Channels = (): React$Element<any> => {
                             <td>Direct</td>
                             <td>2,050</td>
                             <td>
-                                <ProgressBar now={65} style={{ height: '3px' }} />
+                                <ProgressBar now={65} style={% raw %}{{ height: '3px' }}{% endraw %} />
                             </td>
                         </tr>
                         <tr>
                             <td>Organic Search</td>
                             <td>1,405</td>
                             <td>
-                                <ProgressBar now={45} style={{ height: '3px' }} variant="info" />
+                                <ProgressBar now={45} style={% raw %}{{ height: '3px' }}{% endraw %} variant="info" />
                             </td>
                         </tr>
                         <tr>
                             <td>Refferal</td>
                             <td>750</td>
                             <td>
-                                <ProgressBar now={30} style={{ height: '3px' }} variant="warning" />
+                                <ProgressBar now={30} style={% raw %}{{ height: '3px' }}{% endraw %} variant="warning" />
                             </td>
                         </tr>
                         <tr>
                             <td>Social</td>
                             <td>540</td>
                             <td>
-                                <ProgressBar now={25} style={{ height: '3px' }} variant="danger" />
+                                <ProgressBar now={25} style={% raw %}{{ height: '3px' }} {% endraw %}variant="danger" />
                             </td>
                         </tr>
                     </tbody>

@@ -99,7 +99,7 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps): React$Element<React$Fragme
                                 </div>
                             </div>
 
-                            <SimpleBar style={{ maxHeight: '550px', width: '100%' }}>
+                            <SimpleBar style={% raw %}{{ maxHeight: '550px', width: '100%' }}{% endraw %}>
                                 {user.map((user, index) => {
                                     return (
                                         <Link

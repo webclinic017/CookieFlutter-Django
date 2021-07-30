@@ -129,7 +129,7 @@ const ProjectGannt = (): React$Element<React$FragmentType> => {
 
                                 <Row>
                                     <Col>
-                                        <SimpleBar style={{ maxHeight: '535px', width: '100%' }}>
+                                        <SimpleBar style={% raw %}{{ maxHeight: '535px', width: '100%' }}{% endraw %}>
                                             {projects.map((project, idx) => {
                                                 return (
                                                     <Project

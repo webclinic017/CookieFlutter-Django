@@ -210,7 +210,7 @@ const AppMenu = ({ menuItems, location }: AppMenuProps) => {
                                 <MenuItem
                                     item={item}
                                     linkClassName="nav-link dropdown-toggle arrow-none"
-                                    className={{ active: activeMenuItems.includes(item.key) }}
+                                    className={% raw %}{{ active: activeMenuItems.includes(item.key) }}{% endraw %}
                                 />
                             )}
                         </React.Fragment>

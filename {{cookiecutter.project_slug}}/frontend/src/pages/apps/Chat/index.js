@@ -34,15 +34,15 @@ const ChatApp = (): React$Element<React$FragmentType> => {
             />
 
             <Row>
-                <Col xxl={3} xl={{ span: 6, order: 1 }}>
+                <Col xxl={3} xl={% raw %}{{ span: 6, order: 1 }}{% endraw %}>
                     <ChatUsers onUserSelect={onUserChange} />
                 </Col>
 
-                <Col xxl={6} xl={{ span: 12, order: 2 }}>
+                <Col xxl={6} xl={% raw %}{{ span: 12, order: 2 }}{% endraw %}>
                     <ChatArea selectedUser={selectedUser} />
                 </Col>
 
-                <Col xxl={{ span: 3, order: 2 }} xl={{ span: 6, order: 1 }}>
+                <Col xxl={% raw %}{{ span: 3, order: 2 }}{% endraw %} xl={% raw %}{{ span: 6, order: 1 }}{% endraw %}>
                     <ChatProfile selectedUser={selectedUser} />
                 </Col>
             </Row>

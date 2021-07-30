@@ -48,7 +48,7 @@ const RangeSliders = (): React$Element<React$FragmentType> => {
                             <p className="text-muted font-14">Slider with single selecrtor</p>
 
                             <Nouislider
-                                range={{ min: 0, max: 100 }}
+                                range={% raw %}{{ min: 0, max: 100 }}{% endraw %}
                                 start={[20]}
                                 connect
                                 onSlide={(render, handle, value, un, percent) => onSlide(1, value, percent)}
@@ -73,7 +73,7 @@ const RangeSliders = (): React$Element<React$FragmentType> => {
                             <p className="text-muted font-14">Slider with range selecrtor</p>
 
                             <Nouislider
-                                range={{ min: 10, max: 150 }}
+                                range={% raw %}{{ min: 10, max: 150 }}{% endraw %}
                                 start={[20, 45]}
                                 connect
                                 onSlide={(render, handle, value, un, percent) => onSlide2(1, value)}
@@ -94,7 +94,7 @@ const RangeSliders = (): React$Element<React$FragmentType> => {
                             <p className="text-muted font-14">Slider with step value</p>
 
                             <Nouislider
-                                range={{ min: 0, max: 100 }}
+                                range={% raw %}{{ min: 0, max: 100 }}{% endraw %}
                                 start={[20]}
                                 step={10}
                                 connect
@@ -120,7 +120,7 @@ const RangeSliders = (): React$Element<React$FragmentType> => {
                             <p className="text-muted font-14">Slider with range selecrtor with fixed step value</p>
 
                             <Nouislider
-                                range={{ min: 10, max: 150 }}
+                                range={% raw %}{{ min: 10, max: 150 }}{% endraw %}
                                 start={[20, 45]}
                                 step={15}
                                 connect

@@ -12,15 +12,15 @@ const BasicMap = (props) => {
             <Card.Body>
                 <h4 className="header-title mb-3">Basic Google Map</h4>
 
-                <div className="gmaps" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div className="gmaps" style={% raw %}{{ position: 'relative', overflow: 'hidden' }}>{% endraw %}
                     <Map
                         google={props.google}
                         zoom={14}
-                        initialCenter={{ lat: 21.569874, lng: 71.5893798 }}
-                        style={{ width: '100%', height: '100%', position: 'relative' }}
-                        zoomControlOptions={{
+                        initialCenter={% raw %}{{ lat: 21.569874, lng: 71.5893798 }}{% endraw %}
+                        style={% raw %}{{ width: '100%', height: '100%', position: 'relative' }}{% endraw %}
+                        zoomControlOptions={% raw %}{{
                             position: props.google.maps.ControlPosition.LEFT_TOP,
-                        }}></Map>
+                        }}></Map>{% endraw %}
                 </div>
             </Card.Body>
         </Card>
@@ -32,19 +32,19 @@ const MapWithMarker = (props) => {
         <Card>
             <Card.Body>
                 <h4 className="header-title mb-3">Google Map with Marker</h4>
-                <div className="gmaps" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div className="gmaps" style={% raw %}{{ position: 'relative', overflow: 'hidden' }}>{% endraw %}
                     <Map
                         google={props.google}
                         zoom={18}
-                        initialCenter={{ lat: 21.569874, lng: 71.5893798 }}
-                        style={{ width: '100%', height: '100%', position: 'relative' }}
-                        zoomControlOptions={{
+                        initialCenter={% raw %}{{ lat: 21.569874, lng: 71.5893798 }}{% endraw %}
+                        style={% raw %}{{ width: '100%', height: '100%', position: 'relative' }}{% endraw %}
+                        zoomControlOptions={% raw %}{{
                             position: props.google.maps.ControlPosition.LEFT_TOP,
-                        }}>
+                        }}>{% endraw %}
                         <Marker
                             title={'This is sweet home.'}
                             name={'Home sweet home!'}
-                            position={{ lat: 21.569874, lng: 71.5893798 }}></Marker>
+                            position={% raw %}{{ lat: 21.569874, lng: 71.5893798 }}></Marker>{% endraw %}
                     </Map>
                 </div>
             </Card.Body>
@@ -72,13 +72,13 @@ const StreetViewMap = (props) => {
             <Card.Body>
                 <h4 className="header-title mb-3">Street View Panoramas Google Map</h4>
 
-                <div className="gmaps" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div className="gmaps" style={% raw %}{{ position: 'relative', overflow: 'hidden' }}>{% endraw %}
                     <Map
                         google={props.google}
                         ref={(map) => (mapRef = map)}
                         zoom={14}
-                        initialCenter={{ lat: 40.7295174, lng: -73.9986496 }}
-                        style={{ width: '100%', height: '100%', position: 'relative' }}
+                        initialCenter={% raw %}{{ lat: 40.7295174, lng: -73.9986496 }}{% endraw %}
+                        style={% raw %}{{ width: '100%', height: '100%', position: 'relative' }}{% endraw %}
                         streetViewControl={true}
                         onReady={() => {
                             activateStreetView({ lat: 40.7295174, lng: -73.9986496 });
@@ -128,16 +128,16 @@ const LightStyledMap = (props) => {
             <Card.Body>
                 <h4 className="header-title mb-3">Ultra Light with Labels</h4>
 
-                <div className="gmaps" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div className="gmaps" style={% raw %}{{ position: 'relative', overflow: 'hidden' }}>{% endraw %}
                     <Map
                         google={props.google}
                         zoom={14}
-                        initialCenter={{ lat: 40.7295174, lng: -73.9986496 }}
-                        style={{ width: '100%', height: '100%', position: 'relative' }}
+                        initialCenter={% raw %}{{ lat: 40.7295174, lng: -73.9986496 }}{% endraw %}
+                        style={% raw %}{{ width: '100%', height: '100%', position: 'relative' }}{% endraw %}
                         styles={mapStyles}
-                        zoomControlOptions={{
+                        zoomControlOptions={% raw %}{{
                             position: props.google.maps.ControlPosition.LEFT_TOP,
-                        }}></Map>
+                        }}></Map>{% endraw %}
                 </div>
             </Card.Body>
         </Card>
@@ -205,16 +205,16 @@ const DarkStyledMap = (props) => {
             <Card.Body>
                 <h4 className="header-title mb-3">Dark</h4>
 
-                <div className="gmaps" style={{ position: 'relative', overflow: 'hidden' }}>
+                <div className="gmaps" style={% raw %}{{ position: 'relative', overflow: 'hidden' }}>{% endraw %}
                     <Map
                         google={props.google}
                         zoom={14}
-                        initialCenter={{ lat: 40.7295174, lng: -73.9986496 }}
-                        style={{ width: '100%', height: '100%', position: 'relative' }}
+                        initialCenter={% raw %}{{ lat: 40.7295174, lng: -73.9986496 }}{% endraw %}
+                        style={% raw %}{{ width: '100%', height: '100%', position: 'relative' }}{% endraw %}
                         styles={mapStyles}
-                        zoomControlOptions={{
+                        zoomControlOptions={% raw %}{{
                             position: props.google.maps.ControlPosition.LEFT_TOP,
-                        }}></Map>
+                        }}></Map>{% endraw %}
                 </div>
             </Card.Body>
         </Card>

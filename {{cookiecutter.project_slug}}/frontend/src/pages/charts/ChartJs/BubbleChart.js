@@ -88,7 +88,7 @@ const BubbleChart = (): React$Element<any> => {
             <Card.Body>
                 <h4 className="header-title mb-3">Bubble Chart</h4>
 
-                <div className="mb-5 mt-4 chartjs-chart" style={{ height: '320px', maxWidth: '100%' }}>
+                <div className="mb-5 mt-4 chartjs-chart" style={% raw %}{{ height: '320px', maxWidth: '100%' }}{% endraw %}>
                     <Bubble data={bubbleData} options={bubbleChartOpts} />
                 </div>
             </Card.Body>

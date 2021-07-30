@@ -378,13 +378,13 @@ const EmailDetail = (): React$Element<React$FragmentType> => {
                                         wrapperClassName="rich-editor-wrapper"
                                         editorClassName="rich-editor"
                                         onEditorStateChange={onEditorStateChange}
-                                        toolbar={{
+                                        toolbar={% raw %}{{
                                             options: ['inline', 'fontSize', 'fontFamily', 'list', 'textAlign', 'link'],
                                             inline: { inDropdown: true },
                                             list: { inDropdown: true },
                                             textAlign: { inDropdown: true },
                                             link: { inDropdown: true },
-                                        }}
+                                        }}{% endraw %}
                                     />
                                 </Col>
                             </Row>

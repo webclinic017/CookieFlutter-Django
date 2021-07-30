@@ -103,7 +103,7 @@ const BarChart = (): React$Element<any> => {
             <Card.Body>
                 <h4 className="header-title mb-3">Bar Chart</h4>
 
-                <div style={{ height: '320px' }} className="chartjs-chart">
+                <div style={% raw %}{{ height: '320px' }}{% endraw %} className="chartjs-chart">
                     <Bar data={barChartData} options={barChartOpts} />
                 </div>
             </Card.Body>

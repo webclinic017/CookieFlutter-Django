@@ -309,7 +309,7 @@ const FloatingLabels = () => {
                                 <Form.Control
                                     as="textarea"
                                     placeholder="Leave a comment here"
-                                    style={{ height: '100px' }}
+                                    style={% raw %}{{ height: '100px' }}{% endraw %}
                                 />
                             </FloatingLabel>
                         </Col>
@@ -635,13 +635,13 @@ const HorizontalForm = () => {
                     </Form.Group>
 
                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
-                        <Col sm={{ span: 9, offset: 3 }}>
+                        <Col sm={% raw %}{{ span: 9, offset: 3 }}>{% endraw %}
                             <Form.Check label="Remember me" />
                         </Col>
                     </Form.Group>
 
                     <Form.Group as={Row} className="mb-0" controlId="formHorizontalCheck">
-                        <Col sm={{ span: 9, offset: 3 }}>
+                        <Col sm={% raw %}{{ span: 9, offset: 3 }}>{% endraw %}
                             <Button variant="primary" type="submit">
                                 Sign in
                             </Button>

@@ -27,7 +27,7 @@ const BaseVectorMap = ({ width, height, options, type }: BaseVectorMapProps): Re
 
     return (
         <>
-            <div id={selectorId} style={{ width: width, height: height }}></div>
+            <div id={selectorId} style={% raw %}{{ width: width, height: height }}{% endraw %}></div>
         </>
     );
 };

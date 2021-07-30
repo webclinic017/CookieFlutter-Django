@@ -35,7 +35,7 @@ const Recent = ({ recentFiles }: RecentProps): React$Element<React$FragmentType>
                             <th className="border-0">Size</th>
                             <th className="border-0">Owner</th>
                             <th className="border-0">Members</th>
-                            <th className="border-0" style={{ width: '80px' }}>
+                            <th className="border-0" style={% raw %}{{ width: '80px' }}{% endraw %}>
                                 Action
                             </th>
                         </tr>

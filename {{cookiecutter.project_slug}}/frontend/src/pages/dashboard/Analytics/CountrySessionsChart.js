@@ -113,7 +113,7 @@ const CountrySessionsChart = (): React$Element<any> => {
 
                 <Row>
                     <Col lg={8}>
-                        <div className="mt-3 mb-3" style={{ height: '300px' }}>
+                        <div className="mt-3 mb-3" style={% raw %}{{ height: '300px' }}{% endraw %}>
                             <WorldVectorMap height="100%" width="100%" options={options} />
                         </div>
                     </Col>

@@ -85,7 +85,7 @@ const Login2 = (): React$Element<React$FragmentType> => {
                 <VerticalForm
                     onSubmit={onSubmit}
                     resolver={schemaResolver}
-                    defaultValues={{ username: 'test', password: 'test' }}>
+                    defaultValues={% raw %}{{ username: 'test', password: 'test' }}{% endraw %}>
                     <FormInput
                         label={t('Username')}
                         type="text"

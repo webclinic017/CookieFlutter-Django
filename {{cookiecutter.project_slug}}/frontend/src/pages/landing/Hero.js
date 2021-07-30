@@ -32,7 +32,7 @@ const Hero = (): React$Element<'section'> => {
                             </a>
                         </div>
                     </Col>
-                    <Col md={{ span: 5, offset: 2 }}>
+                    <Col md={% raw %}{{ span: 5, offset: 2 }}>{% endraw %}
                         <div className="text-md-end mt-3 mt-md-0">
                             <img src={image1} alt="" className="img-fluid" />
                         </div>

@@ -45,7 +45,7 @@ const Activity = (): React$Element<any> => {
                                 <span className="text-muted font-13">Project</span> <br />
                                 <p className="mb-0">Hyper Mockup</p>
                             </td>
-                            <td className="table-action" style={{ width: '50px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '50px' }}>{% endraw %}
                                 <Dropdown className="float-end" align="end">
                                     <Dropdown.Toggle variant="link" className="arrow-none card-drop p-0 shadow-none">
                                         <i className="mdi mdi-dots-horizontal"></i>
@@ -75,7 +75,7 @@ const Activity = (): React$Element<any> => {
                                 <span className="text-muted font-13">Project</span> <br />
                                 <p className="mb-0">Hyper Mockup</p>
                             </td>
-                            <td className="table-action" style={{ width: '50px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '50px' }}>{% endraw %}
                                 <Dropdown className="float-end" align="end">
                                     <Dropdown.Toggle variant="link" className="arrow-none card-drop p-0 shadow-none">
                                         <i className="mdi mdi-dots-horizontal"></i>
@@ -105,7 +105,7 @@ const Activity = (): React$Element<any> => {
                                 <span className="text-muted font-13">Project</span> <br />
                                 <p className="mb-0">Web UI Design</p>
                             </td>
-                            <td className="table-action" style={{ width: '50px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '50px' }}>{% endraw %}
                                 <Dropdown className="float-end" align="end">
                                     <Dropdown.Toggle variant="link" className="arrow-none card-drop p-0 shadow-none">
                                         <i className="mdi mdi-dots-horizontal"></i>
@@ -135,7 +135,7 @@ const Activity = (): React$Element<any> => {
                                 <span className="text-muted font-13">Project</span> <br />
                                 <p className="mb-0">UBold Admin</p>
                             </td>
-                            <td className="table-action" style={{ width: '50px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '50px' }}>{% endraw %}
                                 <Dropdown className="float-end" align="end">
                                     <Dropdown.Toggle variant="link" className="arrow-none card-drop p-0 shadow-none">
                                         <i className="mdi mdi-dots-horizontal"></i>
@@ -165,7 +165,7 @@ const Activity = (): React$Element<any> => {
                                 <span className="text-muted font-13">Project</span> <br />
                                 <p className="mb-0">Website Mockup</p>
                             </td>
-                            <td className="table-action" style={{ width: '50px' }}>
+                            <td className="table-action" style={% raw %}{{ width: '50px' }}>{% endraw %}
                                 <Dropdown className="float-end" align="end">
                                     <Dropdown.Toggle variant="link" className="arrow-none card-drop p-0 shadow-none">
                                         <i className="mdi mdi-dots-horizontal"></i>

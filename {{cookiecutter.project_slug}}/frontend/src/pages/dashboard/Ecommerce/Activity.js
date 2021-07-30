@@ -25,7 +25,7 @@ const Activity = (): React$Element<any> => {
 
                 <h4 className="header-title mb-2">Recent Activity</h4>
 
-                <SimpleBar style={{ maxHeight: '419px', width: '100%' }}>
+                <SimpleBar style={% raw %}{{ maxHeight: '419px', width: '100%' }}>{% endraw %}
                     <Timeline>
                         <TimelineItem>
                             <i className="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>

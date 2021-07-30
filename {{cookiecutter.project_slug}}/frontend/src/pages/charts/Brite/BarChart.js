@@ -36,7 +36,7 @@ const BarChart = (): React$Element<any> => {
                         height={300}
                         betweenBarsPadding={0.5}
                         colorSchema={['#39afd1']}
-                        margin={{ top: 10, left: 55, bottom: 20, right: 10 }}
+                        margin={% raw %}{{ top: 10, left: 55, bottom: 20, right: 10 }}{% endraw %}
                     />
                 </div>
             </Card.Body>

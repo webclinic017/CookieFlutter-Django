@@ -37,7 +37,7 @@ const HorizontalBarChart = (): React$Element<any> => {
                         percentageAxisToMaxRatio={1.3}
                         labelsNumberFormat={1}
                         colorSchema={['#727cf5', '#0acf97', '#6c757d', '#fa5c7c', '#ffbc00', '#39afd1', '#e3eaef']}
-                        margin={{ top: 10, left: 50, bottom: 20, right: 10 }}
+                        margin={% raw %}{{ top: 10, left: 50, bottom: 20, right: 10 }}{% endraw %}
                     />
                 </div>
             </Card.Body>

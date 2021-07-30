@@ -106,7 +106,7 @@ const Control = ({ children, ...props }) => {
 const IndicatorsContainer = (props) => {
     const { handleClick } = props.selectProps;
     return (
-        <div style={{}}>
+        <div style={% raw %}{{}}{% endraw %}>
             <components.IndicatorsContainer {...props}>
                 <button className="btn btn-primary" onMouseDown={handleClick}>
                     Search
@@ -188,7 +188,7 @@ const TopbarSearch = (props: TopbarSearchProps): React$Element<any> => {
         <>
             <Select
                 {...props}
-                components={{ Control, IndicatorsContainer, MenuList }}
+                components={% raw %}{{ Control, IndicatorsContainer, MenuList }}{% endraw %}
                 placeholder={'Search...'}
                 options={formateOptions(options)}
                 formatOptionLabel={handleFormatOptionLabel}

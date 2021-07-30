@@ -408,7 +408,7 @@ const DropdownWithText = () => {
 
                     <Dropdown>
                         <Dropdown.Toggle>Text Dropdown</Dropdown.Toggle>
-                        <Dropdown.Menu className="p-3 text-muted" style={{ maxWidth: '200px' }}>
+                        <Dropdown.Menu className="p-3 text-muted" style={% raw %}{{ maxWidth: '200px' }}>{% endraw %}
                             <p>Some example text that's free-flowing within the dropdown menu.</p>
                             <p className="mb-0">And this is more example text.</p>
                         </Dropdown.Menu>

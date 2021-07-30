@@ -88,8 +88,8 @@ const Height = () => {
                     <code>.progress-xl</code> classes.
                 </p>
 
-                <ProgressBar now="25" variant="danger" style={{ height: 1 }} />
-                <ProgressBar now="25" className="mt-2" style={{ height: 3 }} />
+                <ProgressBar now="25" variant="danger" style={% raw %}{{ height: 1 }} />{% endraw %}
+                <ProgressBar now="25" className="mt-2" style={% raw %}{{ height: 3 }} />{% endraw %}
                 <ProgressBar now={25} className="mt-2 progress-sm" variant="success" />
                 <ProgressBar now={50} className="mt-2 progress-md" variant="info" />
                 <ProgressBar now="75" className="mt-2 progress-lg" variant="warning" />

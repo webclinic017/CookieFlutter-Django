@@ -32,7 +32,7 @@ const ProfileCard = () => {
         <Card className={classnames('widget-flat')}>
             <Card.Body>
                 <span className="float-start m-2 me-4">
-                    <img src={profileImg} style={{ height: '100px' }} alt="" className="rounded-circle img-thumbnail" />
+                    <img src={profileImg} style={% raw %}{{ height: '100px' }}{% endraw %} alt="" className="rounded-circle img-thumbnail" />
                 </span>
 
                 <div>
@@ -71,7 +71,7 @@ const Activity = () => {
 
                 <h4 className="header-title mb-2">Recent Activity</h4>
 
-                <SimpleBar style={{ maxHeight: '330px', width: '100%' }}>
+                <SimpleBar style={% raw %}{{ maxHeight: '330px', width: '100%' }}>{% endraw %}
                     <Timeline>
                         <TimelineItem>
                             <i className="mdi mdi-upload bg-info-lighten text-info timeline-icon"></i>
@@ -201,7 +201,7 @@ const Transactions = ({ transactions }) => {
 
                     <h4 className="header-title mb-3">Transactions</h4>
 
-                    <SimpleBar style={{ maxHeight: '320px', overflowX: 'hidden' }}>
+                    <SimpleBar style={% raw %}{{ maxHeight: '320px', overflowX: 'hidden' }}>{% endraw %}
                         {transactions.map((item, i) => {
                             return (
                                 <Row key={i} className="py-1 align-items-center">
@@ -349,12 +349,12 @@ const Widgets = (): React$Element<React$FragmentType> => {
                         description="Number of Customers"
                         title="Revenue"
                         stats="$6,254"
-                        trend={{
+                        trend={% raw %}{{
                             textClass: 'badge bg-info',
                             icon: 'mdi mdi-arrow-down-bold',
                             value: '7.00%',
                             time: 'Since last month',
-                        }}></StatisticsWidget>
+                        }}></StatisticsWidget>{% endraw %}
                 </Col>
                 <Col xxl={3} lg={6}>
                     <StatisticsWidget
@@ -362,12 +362,12 @@ const Widgets = (): React$Element<React$FragmentType> => {
                         description="Number of Orders"
                         title="Growth"
                         stats="+ 30.56%"
-                        trend={{
+                        trend={% raw %}{{
                             textClass: 'text-success',
                             icon: 'mdi mdi-arrow-up-bold',
                             value: '4.87%',
                             time: 'Since last month',
-                        }}></StatisticsWidget>
+                        }}></StatisticsWidget>{% endraw %}
                 </Col>
                 <Col xxl={3} lg={6}>
                     <StatisticsWidget
@@ -375,12 +375,12 @@ const Widgets = (): React$Element<React$FragmentType> => {
                         description="Customers"
                         title="Customers"
                         stats="36,254"
-                        trend={{
+                        trend={% raw %}{{
                             textClass: 'badge badge-light-lighten',
                             icon: 'mdi mdi-arrow-up-bold',
                             value: '5.27%',
                             time: 'Since last month',
-                        }}
+                        }}{% endraw %}
                         bgclassName="bg-success"
                         textClass="text-white"></StatisticsWidget>
                 </Col>
@@ -390,12 +390,12 @@ const Widgets = (): React$Element<React$FragmentType> => {
                         description="Revenue"
                         title="Revenue"
                         stats="$10,245"
-                        trend={{
+                        trend={% raw %}{{
                             textClass: 'badge bg-info',
                             icon: 'mdi mdi-arrow-up-bold',
                             value: '17.26%',
                             time: 'Since last month',
-                        }}
+                        }}{% endraw %}
                         bgclassName="bg-primary"
                         textClass="text-white"></StatisticsWidget>
                 </Col>
@@ -408,7 +408,7 @@ const Widgets = (): React$Element<React$FragmentType> => {
                         description="Campaign Sent"
                         title="Campaign Sent"
                         stats="9,184"
-                        trend={{ textClass: 'text-success', icon: 'mdi mdi-arrow-up-bold', value: '3.27%' }}
+                        trend={% raw %}{{ textClass: 'text-success', icon: 'mdi mdi-arrow-up-bold', value: '3.27%' }}{% endraw %}
                         colors={['#727cf5']}
                         data={[25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]}></StatisticsChartWidget>
                 </Col>
@@ -417,7 +417,7 @@ const Widgets = (): React$Element<React$FragmentType> => {
                         description="New Leads"
                         title="New Leads"
                         stats="3,254"
-                        trend={{ textClass: 'text-success', icon: 'mdi mdi-arrow-up-bold', value: '5.38%' }}
+                        trend={% raw %}{{ textClass: 'text-success', icon: 'mdi mdi-arrow-up-bold', value: '5.38%' }}{% endraw %}
                         colors={['#727cf5']}
                         type="line"
                         data={[25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54]}></StatisticsChartWidget>
@@ -427,7 +427,7 @@ const Widgets = (): React$Element<React$FragmentType> => {
                         description="Deals"
                         title="Deals"
                         stats="861"
-                        trend={{ textClass: 'text-success', icon: 'mdi mdi-arrow-up-bold', value: '4.87%' }}
+                        trend={% raw %}{{ textClass: 'text-success', icon: 'mdi mdi-arrow-up-bold', value: '4.87%' }}{% endraw %}
                         colors={['#727cf5']}
                         data={[12, 14, 2, 47, 42, 15, 47, 75, 65, 19, 14]}></StatisticsChartWidget>
                 </Col>
@@ -436,7 +436,7 @@ const Widgets = (): React$Element<React$FragmentType> => {
                         description="Booked Revenue"
                         title="Booked Revenue"
                         stats="$253k"
-                        trend={{ textClass: 'text-success', icon: 'mdi mdi-arrow-up-bold', value: '11.7%' }}
+                        trend={% raw %}{{ textClass: 'text-success', icon: 'mdi mdi-arrow-up-bold', value: '11.7%' }}{% endraw %}
                         colors={['#727cf5']}
                         data={[47, 45, 74, 14, 56, 74, 14, 11, 7, 39, 82]}></StatisticsChartWidget>
                 </Col>

@@ -40,7 +40,7 @@ const Features = ({ features }: FeaturesProps): React$Element<React$FragmentType
                                 <Col lg={5}>
                                     <img src={item.image} className="img-fluid" alt="" />
                                 </Col>
-                                <Col lg={{ span: 6, offset: 1 }}>
+                                <Col lg={% raw %}{{ span: 6, offset: 1 }}>{% endraw %}
                                     <h3 className="fw-normal">{item.title}</h3>
                                     <p className="text-muted mt-3">{item.desc}</p>
 
@@ -77,7 +77,7 @@ const Features = ({ features }: FeaturesProps): React$Element<React$FragmentType
                                         Read More <i className="mdi mdi-arrow-right ms-1"></i>
                                     </Link>
                                 </Col>
-                                <Col lg={{ span: 5, offset: 1 }}>
+                                <Col lg={% raw %}{{ span: 5, offset: 1 }}>{% endraw %}
                                     <img src={item.image} className="img-fluid" alt="" />
                                 </Col>
                             </Row>

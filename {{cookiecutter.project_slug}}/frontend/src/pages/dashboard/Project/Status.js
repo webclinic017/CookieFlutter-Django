@@ -43,7 +43,7 @@ const Status = (): React$Element<any> => {
 
                 <h4 className="header-title mb-4">Project Status</h4>
 
-                <div className="my-4 chartjs-chart" style={{ height: '202px' }}>
+                <div className="my-4 chartjs-chart" style={% raw %}{{ height: '202px' }}>{% endraw %}
                     <Doughnut data={donutChartData} options={donutChartOpts} />
                 </div>
 

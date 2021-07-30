@@ -37,7 +37,7 @@ const Calendar = ({ onDateClick, onEventClick, onDrop, events }: CalendarProps):
                     plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin, listPlugin, BootstrapTheme]}
                     handleWindowResize={true}
                     themeSystem="bootstrap"
-                    buttonText={{
+                    buttonText={% raw %}{{
                         today: 'Today',
                         month: 'Month',
                         week: 'Week',
@@ -45,12 +45,12 @@ const Calendar = ({ onDateClick, onEventClick, onDrop, events }: CalendarProps):
                         list: 'List',
                         prev: 'Prev',
                         next: 'Next',
-                    }}
-                    headerToolbar={{
+                    }}{% endraw %}
+                    headerToolbar={% raw %}{{
                         left: 'prev,next today',
                         center: 'title',
                         right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
-                    }}
+                    }}{% endraw %}
                     editable={true}
                     selectable={true}
                     droppable={true}
