@@ -1,8 +1,8 @@
 {
-  "project_name": "Octopi",
+  "project_name": "Octopod Spork",
   "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
   "description": "Behold, the magnificent {{ cookiecutter.project_name.upper() }}!!!",
-  "author_name": "Octovian Podioquis",
+  "author_name": "{{ cookiecutter.project_name.|replace(' ', 'ian_')|replace('-', '_')|replace('.', '_')|trim() }}le",
   "domain_name": "{{ cookiecutter.project_slug }}.com",
   "server_ip_address": "40.114.177.156",
   "email": "{{ cookiecutter.author_name.lower()|replace(' ', '.') }}@{{ cookiecutter.domain_name }}",
