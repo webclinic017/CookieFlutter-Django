@@ -94,7 +94,7 @@ const ChatArea = ({ selectedUser }: ChatAreaProps): React$Element<React$Fragment
         id: 9,
         name: 'Shreyu N',
         avatar: 'assets/images/users/avatar-7.jpg',
-        email: 'support@{{cookiecutter.domain}}',
+        email: 'support@{{cookiecutter.domain_name }}',
         phone: '+1 456 9595 9594',
         location: 'California, USA',
         languages: 'English, German, Spanish',

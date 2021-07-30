@@ -45,7 +45,7 @@ const ErrorPageNotFound = (): React$Element<React$FragmentType> => {
                 </div>
             </div>
 
-            <footer className="footer footer-alt">2018 - 2021 © {{cookiecutter.project_name}} - {{cookiecutter.domain}}</footer>
+            <footer className="footer footer-alt">2018 - 2021 © {{cookiecutter.project_name}} - {{cookiecutter.domain_name }}</footer>
         </React.Fragment>
     );
 };

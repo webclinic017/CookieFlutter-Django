@@ -152,7 +152,7 @@ const rawFaqs = [
     {
         id: 3,
         question: 'How do I get help with the theme?',
-        answer: 'Use our dedicated support email (support@{{cookiecutter.domain}}) to send your issues or feedback. We are here to help anytime.',
+        answer: 'Use our dedicated support email (support@{{cookiecutter.domain_name }}) to send your issues or feedback. We are here to help anytime.',
         titleClass: 'text-body',
         textClass: 'pb-1 text-muted',
     },
