@@ -15,18 +15,12 @@
     "Apache Software License 2.0"
   ],
   "timezone": "America/Chicago",
-  "windows": "n",
   "use_pycharm": "n",
-  "use_docker": "y",
   "postgresql_version": [
     "13.2",
     "12.6",
     "11.11",
     "10.16"
-  ],
-  "js_task_runner": [
-    "Gulp",
-    "None"
   ],
   "cloud_provider": [
     "GCP",
@@ -39,14 +33,11 @@
     "Mailjet",
     "Mandrill",
     "Postmark",
-    "Sendgrid",
     "SendinBlue",
     "SparkPost",
     "Other SMTP"
   ],
   "use_async": "y",
-  "use_drf": "y",
-  "custom_bootstrap_compilation": "y",
   "use_compressor": "y",
   "use_celery": "y",
   "use_mailhog": "y",
@@ -62,6 +53,5 @@
     "Gitlab",
     "Github"
   ],
-  "keep_local_envs_in_vcs": "y",
   "debug": "n"
 }

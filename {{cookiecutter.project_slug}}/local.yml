@@ -109,7 +109,6 @@ services:
     command: /start-flower
 
   {%- endif %}
-  {%- if cookiecutter.js_task_runner == 'Gulp' %}
 
   node:
     build:
@@ -122,11 +121,11 @@ services:
     volumes:
       - .:/app:z
       # http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
-      - /app/node_modules
+      - /app/frontend/node_modules
     command: npm run dev
+    command: npm start
     ports:
       - "3000:3000"
       # Expose browsersync UI: https://www.browsersync.io/docs/options/#option-ui
       - "3001:3001"
 
-  {%- endif %}

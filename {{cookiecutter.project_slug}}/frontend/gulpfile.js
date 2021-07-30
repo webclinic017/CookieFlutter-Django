@@ -3,7 +3,7 @@
 ////////////////////////////////
 
 // Gulp and package
-const { src, dest, parallel, series, watch, gulp } = require('gulp')
+const { src, dest, parallel, series, watch } = require('gulp')
 const pjson = require('./frontend/package.json')
 
 // Plugins

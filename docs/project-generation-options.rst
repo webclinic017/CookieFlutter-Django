@@ -37,14 +37,8 @@ open_source_license:
 timezone:
     The value to be used for the ``TIME_ZONE`` setting of the project.
 
-windows:
-    Indicates whether the project should be configured for development on Windows.
-
 use_pycharm:
     Indicates whether the project should be configured for development with PyCharm_.
-
-use_docker:
-    Indicates whether the project should be configured to use Docker_ and `Docker Compose`_.
 
 postgresql_version:
     Select a PostgreSQL_ version to use. The choices are:
@@ -54,12 +48,6 @@ postgresql_version:
     3. 10.8
     4. 9.6
     5. 9.5
-
-js_task_runner:
-    Select a JavaScript task runner. The choices are:
-
-    1. None
-    2. Gulp_
 
 cloud_provider:
     Select a cloud provider for static & media files. The choices are:
@@ -78,21 +66,12 @@ mail_service:
     3. Mailjet_
     4. Mandrill_
     5. Postmark_
-    6. SendGrid_
-    7. SendinBlue_
-    8. SparkPost_
-    9. `Other SMTP`_
+    6. SendinBlue_
+    7. SparkPost_
+    8. `Other SMTP`_
 
 use_async:
     Indicates whether the project should use web sockets with Uvicorn + Gunicorn.
-
-use_drf:
-    Indicates whether the project should be configured to use `Django Rest Framework`_.
-
-custom_bootstrap_compilation:
-    Indicates whether the project should support Bootstrap recompilation
-    via the selected JavaScript task runner's task. This can be useful
-    for real-time Bootstrap variable alteration.
 
 use_compressor:
     Indicates whether the project should be configured to use `Django Compressor`_.
@@ -121,12 +100,6 @@ ci_tool:
     3. `Gitlab CI`_
     4. `Github Actions`_
 
-keep_local_envs_in_vcs:
-    Indicates whether the project's ``.envs/.local/`` should be kept in VCS
-    (comes in handy when working in teams where local environment reproducibility
-    is strongly encouraged).
-    Note: .env(s) are only utilized when Docker Compose and/or Heroku support is enabled.
-
 debug:
     Indicates whether the project should be configured for debugging.
     This option is relevant for Cookiecutter Django developers only.
@@ -154,7 +127,6 @@ debug:
 .. _Mailjet: https://www.mailjet.com
 .. _Mandrill: http://mandrill.com
 .. _Postmark: https://postmarkapp.com
-.. _SendGrid: https://sendgrid.com
 .. _SendinBlue: https://www.sendinblue.com
 .. _SparkPost: https://www.sparkpost.com
 .. _Other SMTP: https://anymail.readthedocs.io/en/stable/

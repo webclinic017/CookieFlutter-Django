@@ -1,19 +1,17 @@
 ARG PYTHON_VERSION=3.9-slim-buster
 
-{% if cookiecutter.js_task_runner == 'Gulp' -%}
 FROM node:10-stretch-slim as client-builder
 
 ARG APP_HOME=/app
 WORKDIR ${APP_HOME}/frontend
 
 COPY ./frontend/package.json ${APP_HOME}/frontend
-RUN npm install && npm cache clean --force
+RUN npm i && npm install && npm cache clean --force
 COPY . ${APP_HOME}
 RUN npm run build
 
 WORKDIR ${APP_HOME}
 
-{%- endif %}
 
 # define an alias for the specfic python version used in this file.
 FROM python:${PYTHON_VERSION} as python
@@ -112,11 +110,8 @@ RUN chmod +x /start-flower
 
 
 # copy application code to WORKDIR
-{%- if cookiecutter.js_task_runner == 'Gulp' %}
 COPY --from=client-builder --chown=django:django ${APP_HOME} ${APP_HOME}
-{% else %}
-COPY --chown=django:django . ${APP_HOME}
-{%- endif %}
+
 
 # make django owner of the WORKDIR directory as well.
 RUN chown django:django ${APP_HOME}

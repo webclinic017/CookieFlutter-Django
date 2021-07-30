@@ -172,8 +172,6 @@ Answer the prompts with your own desired options_. For example::
     use_mailhog [n]: n
     use_sentry [n]: y
     use_pycharm [n]: y
-    windows [n]: n
-    use_docker [n]: n
     use_heroku [n]: y
     use_compressor [n]: y
     Select postgresql_version:
@@ -182,16 +180,12 @@ Answer the prompts with your own desired options_. For example::
     3 - 11.11
     4 - 10.16
     Choose from 1, 2, 3, 4, 5 [1]: 1
-    Select js_task_runner:
-    1 - None
-    2 - Gulp
     Choose from 1, 2 [1]: 1
     Select cloud_provider:
     1 - AWS
     2 - GCP
     3 - None
     Choose from 1, 2, 3 [1]: 1
-    custom_bootstrap_compilation [n]: n
     Select open_source_license:
     1 - MIT
     2 - BSD
@@ -199,7 +193,6 @@ Answer the prompts with your own desired options_. For example::
     4 - Apache Software License 2.0
     5 - Not open source
     Choose from 1, 2, 3, 4, 5 [1]: 1
-    keep_local_envs_in_vcs [y]: y
     debug[n]: n
 
 Enter the project and take a look around::

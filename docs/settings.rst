@@ -62,10 +62,6 @@ MANDRILL_API_KEY                        MANDRILL_API_KEY            n/a         
 MANDRILL_API_URL                        n/a                         n/a                                            "https://mandrillapp.com/api/1.0"
 POSTMARK_SERVER_TOKEN                   POSTMARK_SERVER_TOKEN       n/a                                            raises error
 POSTMARK_API_URL                        n/a                         n/a                                            "https://api.postmarkapp.com/"
-SENDGRID_API_KEY                        SENDGRID_API_KEY            n/a                                            raises error
-SENDGRID_GENERATE_MESSAGE_ID            True                        n/a                                            raises error
-SENDGRID_MERGE_FIELD_FORMAT             None                        n/a                                            raises error
-SENDGRID_API_URL                        n/a                         n/a                                            "https://api.sendgrid.com/v3/"
 SENDINBLUE_API_KEY                      SENDINBLUE_API_KEY          n/a                                            raises error
 SENDINBLUE_API_URL                      n/a                         n/a                                            "https://api.sendinblue.com/v3/"
 SPARKPOST_API_KEY                       SPARKPOST_API_KEY           n/a                                            raises error

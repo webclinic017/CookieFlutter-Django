@@ -40,13 +40,8 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-{% if cookiecutter.use_docker == "y" -%}
 DATABASES = {"default": env.db("DATABASE_URL")}
-{%- else %}
-DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}"),
-}
-{%- endif %}
+
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 {% if cookiecutter.use_gis_tools == "y" %}
 DATABASES["default"]["ENGINE"] = "django.contrib.gis.db.backends.postgis"
@@ -80,14 +75,12 @@ THIRD_PARTY_APPS = [
 {%- if cookiecutter.use_celery == 'y' %}
     "django_celery_beat",
 {%- endif %}
-{%- if cookiecutter.use_drf == "y" %}
     "rest_framework",
     "rest_framework.authtoken",
     'rest_auth', # https://django-rest-auth.readthedocs.io/en/latest/installation.html
     'rest_auth.registration',
     "corsheaders",
     'rest_framework_swagger',
-{%- endif %}
 ]
 
 LOCAL_APPS = [
@@ -141,9 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-{%- if cookiecutter.use_drf == 'y' %}
     "corsheaders.middleware.CorsMiddleware",
-{%- endif %}
 {%- if cookiecutter.use_whitenoise == 'y' %}
     "whitenoise.middleware.WhiteNoiseMiddleware",
 {%- endif %}
@@ -321,7 +312,6 @@ SOCIALACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.SocialAcco
 INSTALLED_APPS += ["compressor"]
 STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 {%- endif %}
-{% if cookiecutter.use_drf == "y" -%}
 # django-rest-framework
 # -------------------------------------------------------------------------------
 # django-rest-framework - https://www.django-rest-framework.org/api-guide/settings/
@@ -350,6 +340,5 @@ SWAGGER_SETTINGS = {
     'LOGOUT_URL': 'logout',
 }
 
-{%- endif %}
 # Your stuff...
 # ------------------------------------------------------------------------------

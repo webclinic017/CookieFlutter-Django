@@ -1,58 +1,37 @@
-import React, { Component, Fragment } from "react";
-import ReactDOM from "react-dom";
-import {
-  HashRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+// @flow
+import React from 'react';
+import Routes from './routes/Routes';
 
-import { Provider as AlertProvider } from "react-alert";
-import AlertTemplate from "react-alert-template-basic";
+// setup fake backend
+import { configureFakeBackend } from './helpers';
 
-import Header from "./components/layout/Header";
-import Dashboard from "./components/accounts/Dashboard";
-import Alerts from "./components/layout/Alerts";
-import Login from "./components/accounts/Login";
-import Register from "./components/accounts/Register";
-import PrivateRoute from "./components/common/PrivateRoute";
+// Themes
 
-import { Provider } from "react-redux";
-import store from "./store";
-import { loadUser } from "./actions/auth";
+// For Saas import Saas.scss
+import './assets/scss/Saas.scss';
+// For Dark import Saas-Dark.scss
+// import './assets/scss/Saas-Dark.scss';
 
-// Alert Options
-const alertOptions = {
-  timeout: 3000,
-  position: "top center",
+// For Modern demo import Modern.scss
+// import './assets/scss/Modern.scss';
+// For Modern dark demo import Modern-Dark.scss
+// import './assets/scss/Modern-Dark.scss';
+
+// For Creative demo import Creative.scss
+// import './assets/scss/Creative.scss';
+// For Creative dark demo import Creative-Dark.scss
+// import './assets/scss/Creative-Dark.scss';
+
+// configure fake backend
+configureFakeBackend();
+
+type AppProps = {};
+
+/**
+ * Main app component
+ */
+const App = (props: AppProps): React$Element<any> => {
+    return <Routes></Routes>;
 };
 
-class App extends Component {
-  componentDidMount() {
-    store.dispatch(loadUser());
-  }
-
-  render() {
-    return (
-      <Provider store={store}>
-        <AlertProvider template={AlertTemplate} {...alertOptions}>
-          <Router>
-            <Fragment>
-              <Header />
-              <Alerts />
-              <div className="container">
-                <Switch>
-                  <PrivateRoute exact path="/" component={Dashboard} />
-                  <Route exact path="/register" component={Register} />
-                  <Route exact path="/login" component={Login} />
-                </Switch>
-              </div>
-            </Fragment>
-          </Router>
-        </AlertProvider>
-      </Provider>
-    );
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
