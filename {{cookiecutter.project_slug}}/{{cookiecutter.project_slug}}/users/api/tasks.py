@@ -54,7 +54,7 @@ def send_email(body, subject, recipients):
     requests.post(
         f"https://api.mailgun.net/v3/{env('MAILGUN_DOMAIN')}/messages",
         auth=("api", env('MAILGUN_API_KEY')),
-        data={"from": "No Reply <noreply@{{ cookiecutter.domain }}>",
+        data={"from": "No Reply <noreply@{{ cookiecutter.domain_name }}>",
               "to": ", ".join(recipients),
               "subject": subject,
               "html": body
