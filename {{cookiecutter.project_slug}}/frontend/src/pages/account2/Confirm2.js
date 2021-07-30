@@ -14,7 +14,7 @@ const BottomLink = () => {
 
     return (
         <footer className="footer footer-alt">
-            <p className="text-muted">{t('2018 - 2021 © {{cookiecutter.project_name}} - Coderthemes.com')}</p>
+            <p className="text-muted">{t('2018 - 2021 © {{cookiecutter.project_name}} - {{cookiecutter.domain}}')}</p>
         </footer>
     );
 };

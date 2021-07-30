@@ -1,6 +1,6 @@
 {
-  "short_name": "Hyper React",
-  "name": "Hyper React - A responsive bootstrap 5 admin template",
+  "short_name": "{{ cookiecutter.project_name }} React",
+  "name": "{{ cookiecutter.project_name }} React - A responsive bootstrap 5 admin template",
   "icons": [
     {
       "src": "favicon.ico",

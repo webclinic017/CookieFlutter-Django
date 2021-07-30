@@ -26,7 +26,7 @@ const SellerBox = (): React$Element<any> => {
                     </p>
 
                     <p className="text-muted">
-                        <strong>Email :</strong> <span className="ms-2">coderthemes@gmail.com</span>
+                        <strong>Email :</strong> <span className="ms-2">{{cookiecutter.author }}@gmail.com</span>
                     </p>
 
                     <p className="text-muted">

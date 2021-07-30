@@ -441,7 +441,7 @@ const Kanban = (): React$Element<React$FragmentType> => {
                                         errors={errors}
                                         control={control}>
                                         <option>Select</option>
-                                        <option>Coderthemes</option>
+                                        <option>{{cookiecutter.author }}</option>
                                         <option>Robert Carlile</option>
                                         <option>Louis Allen</option>
                                         <option>Sean White</option>

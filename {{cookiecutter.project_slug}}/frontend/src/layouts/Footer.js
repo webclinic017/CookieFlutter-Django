@@ -9,7 +9,7 @@ const Footer = (): React$Element<any> => {
             <footer className="footer">
                 <div className="container-fluid">
                     <Row>
-                        <Col md={6}>{currentYear} © {{cookiecutter.project_name}} - Coderthemes.com</Col>
+                        <Col md={6}>{currentYear} © {{cookiecutter.project_name}} </Col>
 
                         <Col md={6}>
                             <div className="text-md-end footer-links d-none d-md-block">
