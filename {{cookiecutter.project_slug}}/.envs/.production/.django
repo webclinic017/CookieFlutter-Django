@@ -34,6 +34,7 @@ SENDINBLUE_API_KEY=
 SPARKPOST_API_KEY=
 {% endif %}
 
+{% if cookiecutter.cloud_provider == 'AWS' %}
 # AWS
 # ------------------------------------------------------------------------------
 DJANGO_AWS_ACCESS_KEY_ID=
