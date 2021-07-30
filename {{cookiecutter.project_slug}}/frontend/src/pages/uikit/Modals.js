@@ -55,7 +55,7 @@ const ModalSizes = () => {
         <>
             <Card>
                 <Card.Body>
-                    <h4 className="header-title">Bootstrap Modals</h4>
+                    <h4 className="header-title">Modals</h4>
 
                     <p className="text-muted">A rendered modal with header, body, and set of actions in the footer.</p>
 

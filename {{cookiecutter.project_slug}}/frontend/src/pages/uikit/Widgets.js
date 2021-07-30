@@ -90,7 +90,7 @@ const Activity = () => {
                             <i className="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
                             <div className="timeline-item-info">
                                 <a href="/" className="text-primary fw-bold mb-1 d-block">
-                                    Product on the Bootstrap Market
+                                    Product on the Market
                                 </a>
                                 <small>
                                     Dave Gamache added <span className="fw-bold">Admin Dashboard</span>
@@ -136,7 +136,7 @@ const Activity = () => {
                             <i className="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
                             <div className="timeline-item-info">
                                 <a href="/" className="text-primary fw-bold mb-1 d-block">
-                                    Product on the Bootstrap Market
+                                    Product on the Market
                                 </a>
                                 <small>
                                     Dave Gamache added <span className="fw-bold">Admin Dashboard</span>
@@ -256,7 +256,7 @@ const Widgets = (): React$Element<React$FragmentType> => {
         },
         {
             icon: 'mdi mdi-arrow-collapse-down',
-            title: 'Payment received Bootstrap Marketplace',
+            title: 'Payment received Marketplace',
             time: 'Yesterday',
             amount: '+$1578.54',
             textClass: 'text-success',

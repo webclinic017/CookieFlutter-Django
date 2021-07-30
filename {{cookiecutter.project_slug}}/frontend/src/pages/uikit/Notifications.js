@@ -48,7 +48,7 @@ const DefaultToasts = () => {
     return (
         <Card>
             <Card.Body>
-                <h4 className="header-title">Bootstrap Toasts</h4>
+                <h4 className="header-title">Toasts</h4>
                 <p className="text-muted font-14">
                     Push notifications to your visitors with a toast, a lightweight and easily customizable alert
                     message.

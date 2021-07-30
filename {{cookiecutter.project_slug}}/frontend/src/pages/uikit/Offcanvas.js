@@ -47,7 +47,7 @@ const OffcanvasPlacement = ({ name, ...props }) => {
                     <Offcanvas.Title>Offcanvas {name}</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    Content for the offcanvas goes here. You can place just about any Bootstrap component or custom
+                    Content for the offcanvas goes here. You can place just about any component or custom
                     elements here.
                 </Offcanvas.Body>
             </Offcanvas>

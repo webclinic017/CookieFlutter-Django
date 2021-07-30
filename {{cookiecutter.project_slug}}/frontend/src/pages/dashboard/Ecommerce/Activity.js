@@ -44,7 +44,7 @@ const Activity = (): React$Element<any> => {
                             <i className="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
                             <div className="timeline-item-info">
                                 <a href="/" className="text-primary fw-bold mb-1 d-block">
-                                    Product on the Bootstrap Market
+                                    Product on the Market
                                 </a>
                                 <small>
                                     Dave Gamache added <span className="fw-bold">Admin Dashboard</span>
@@ -89,7 +89,7 @@ const Activity = (): React$Element<any> => {
                             <i className="mdi mdi-airplane bg-primary-lighten text-primary timeline-icon"></i>
                             <div className="timeline-item-info">
                                 <a href="/" className="text-primary fw-bold mb-1 d-block">
-                                    Product on the Bootstrap Market
+                                    Product on the Market
                                 </a>
                                 <small>
                                     Dave Gamache added <span className="fw-bold">Admin Dashboard</span>

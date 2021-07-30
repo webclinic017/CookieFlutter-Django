@@ -16,7 +16,7 @@ const services = [
     },
     {
         icon: 'uil uil-vector-square',
-        title: 'Based on Bootstrap UI',
+        title: 'Based on UI',
         description: 'Temporibus autem quibusdam et aut officiis necessitatibus saepe eveniet ut sit et recusandae.',
     },
     {
