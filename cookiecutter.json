@@ -40,7 +40,6 @@
   "use_async": "y",
   "use_compressor": "y",
   "use_celery": "y",
-  "use_mailhog": "y",
   "use_sentry": "y",
   "use_whitenoise": "y",
   "use_gis_tools": "y",

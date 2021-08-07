@@ -71,8 +71,6 @@ SUPPORTED_COMBINATIONS = [
     {"use_compressor": "n"},
     {"use_celery": "y"},
     {"use_celery": "n"},
-    {"use_mailhog": "y"},
-    {"use_mailhog": "n"},
     {"use_sentry": "y"},
     {"use_sentry": "n"},
     {"use_whitenoise": "y"},

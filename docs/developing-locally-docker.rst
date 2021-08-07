@@ -166,7 +166,7 @@ The ``container_name`` from the yml file can be used to check on containers with
 Mailhog
 ~~~~~~~
 
-When developing locally you can go with MailHog_ for email testing provided ``use_mailhog`` was set to ``y`` on setup. To proceed,
+When developing locally you can go with MailHog_ for email testing. To proceed,
 
 #. make sure ``mailhog`` container is up and running;
 

@@ -84,7 +84,6 @@ To run a celery worker:
 Please note: For Celery's import magic to work, it is important *where* the celery commands are run. If you are in the same folder with *manage.py*, you should be right.
 
 {%- endif %}
-{%- if cookiecutter.use_mailhog == "y" %}
 
 Email Server
 ^^^^^^^^^^^^
@@ -98,7 +97,7 @@ With MailHog running, to view messages that are sent by your application, open y
 
 
 .. _mailhog: https://github.com/mailhog/MailHog
-{%- endif %}
+
 {%- if cookiecutter.use_sentry == "y" %}
 
 Sentry

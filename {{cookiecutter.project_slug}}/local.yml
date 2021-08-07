@@ -16,9 +16,7 @@ services:
     container_name: django
     depends_on:
       - postgres
-      {%- if cookiecutter.use_mailhog == 'y' %}
       - mailhog
-      {%- endif %}
     volumes:
       - .:/app:z
       {% if cookiecutter.use_celery == 'y' %}
@@ -59,7 +57,6 @@ services:
     ports:
       - "7000:7000"
     command: /start-docs
-  {%- if cookiecutter.use_mailhog == 'y' %}
 
   mailhog:
     image: mailhog/mailhog:v1.0.0
@@ -67,7 +64,6 @@ services:
     ports:
       - "8025:8025"
 
-  {%- endif %}
   {%- if cookiecutter.use_celery == 'y' %}
 
   redis:
@@ -81,9 +77,7 @@ services:
     depends_on:
       - redis
       - postgres
-      {%- if cookiecutter.use_mailhog == 'y' %}
       - mailhog
-      {%- endif %}
     ports: []
     command: /start-celeryworker
 
@@ -94,9 +88,7 @@ services:
     depends_on:
       - redis
       - postgres
-      {%- if cookiecutter.use_mailhog == 'y' %}
       - mailhog
-      {%- endif %}
     ports: []
     command: /start-celerybeat
 

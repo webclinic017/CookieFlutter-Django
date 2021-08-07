@@ -79,9 +79,6 @@ use_compressor:
 use_celery:
     Indicates whether the project should be configured to use Celery_.
 
-use_mailhog:
-    Indicates whether the project should be configured to use MailHog_.
-
 use_sentry:
     Indicates whether the project should be configured to use Sentry_.
 
