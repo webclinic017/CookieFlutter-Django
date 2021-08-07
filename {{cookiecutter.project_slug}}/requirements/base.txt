@@ -33,9 +33,11 @@ django-redis==5.0.0  # https://github.com/jazzband/django-redis
 # Django REST Framework
 djangorestframework==3.12.4  # https://github.com/encode/django-rest-framework
 django-cors-headers==3.7.0 # https://github.com/adamchainz/django-cors-headers
-django-rest-auth==0.9.5
-djangorestframework-jwt==1.11.0
-django-rest-swagger
+dj-rest-auth # NEWADD 
+djangorestframework-simplejwt==4.7.1 # NEWADD
+drf-yasg==1.20.0 # NEWADD 
+coreapi==2.3.3 # NEWADD
+
 
 
 {%- if cookiecutter.use_data_science_tools == "y" %}
@@ -54,6 +56,7 @@ keras
 # joblib # optional: for pipelining/workflow
 {%- endif %}
 
+
 {%- if cookiecutter.use_web_crawling_tools == "y" %}
 # Web crawling
 # ------------------------------------------------------------------------------
@@ -62,4 +65,5 @@ requests==2.24.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3
 selenium==3.141.0
 python-anticaptcha==0.7.1
 {%- endif %}
+
 

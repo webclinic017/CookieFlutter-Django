@@ -72,15 +72,16 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-{%- if cookiecutter.use_celery == 'y' %}
-    "django_celery_beat",
-{%- endif %}
+    # 'allauth.socialaccount.providers.facebook', # NEWADD # SPLITPOINT
     "rest_framework",
     "rest_framework.authtoken",
-    'rest_auth', # https://django-rest-auth.readthedocs.io/en/latest/installation.html
-    'rest_auth.registration',
     "corsheaders",
-    'rest_framework_swagger',
+    'dj_rest_auth', # NEWADD
+    'dj_rest_auth.registration', # NEWADD
+    'drf_yasg', # NEWADD
+    {%- if cookiecutter.use_celery == 'y' %}
+    "django_celery_beat",
+    {%- endif %}
 ]
 
 LOCAL_APPS = [
@@ -105,7 +106,7 @@ AUTHENTICATION_BACKENDS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
 AUTH_USER_MODEL = "users.User"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = "users:redirect"
+# LOGIN_REDIRECT_URL = "users:redirect" # NEWRM
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
 LOGIN_URL = "account_login"
 
@@ -298,13 +299,13 @@ ACCOUNT_ALLOW_REGISTRATION = env.bool("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_REQUIRED = True # SPLITPOINT
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_EMAIL_VERIFICATION = "mandatory" # SPLITPOINT
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.AccountAdapter"
+ACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.AccountAdapter" # NEWRM
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-SOCIALACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.SocialAccountAdapter"
+SOCIALACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.SocialAccountAdapter" # NEWRM
 # personal pet peeve
 LOGOUT_ON_PASSWORD_CHANGE = False
 
@@ -318,41 +319,34 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 # django-rest-framework
 # -------------------------------------------------------------------------------
 # django-rest-framework - https://www.django-rest-framework.org/api-guide/settings/
-REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': '{{cookiecutter.project_slug}}.users.api.serializers.UserSerializer'
-}
-
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication' # NEWADD
     ),
-    'DEFAULT_THROTTLE_CLASSES': (
-        'rest_framework.throttling.AnonRateThrottle',
-        'rest_framework.throttling.UserRateThrottle'
-    ),
-    'DEFAULT_THROTTLE_RATES': {
-        'anon': '100/day',
-        'user': '1000/day'
-    },
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
-}
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' # NEWADD
 
-REST_USE_JWT = True
-REST_SESSION_LOGIN = False
+}
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
 CORS_URLS_REGEX = r"^/api/.*$"
-CORS_ORIGIN_WHITELIST = [
-    'http://0.0.0.0:3000',
-    'http://0.0.0.0:8000',
-]
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [ # SPLITPOINT
+    'http://0.0.0.0:3000', # SPLITPOINT
+    'http://0.0.0.0:8000', # SPLITPOINT
+    'https:/{{cookiecutter.domain_name}}', # SPLITPOINT
+  
+] # SPLITPOINT
+CORS_ALLOW_CREDENTIALS = True # SPLITPOINT
 
-SWAGGER_SETTINGS = {
-    'LOGIN_URL': 'login',
-    'LOGOUT_URL': 'logout',
-}
+REST_SESSION_LOGIN = True # NEWADD
+REST_USE_JWT = True # NEWADD
+JWT_AUTH_COOKIE = 'auth' # NEWADD
+SWAGGER_SETTINGS = {'LOGIN_URL': 'login', 'LOGOUT_URL': 'logout',} # NEWADD
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField' # NEWADD
+
 
 # Your stuff...
 # ------------------------------------------------------------------------------

@@ -1,52 +1,87 @@
-{% raw %}{% load static i18n {% endraw %}{% if cookiecutter.use_compressor == "y" %}compress{% endif %}{% raw %}%}<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}{% endraw %}{{ cookiecutter.project_name }}{% raw %}{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% endraw %}{{ cookiecutter.description }}{% raw %}">
-    <meta name="author" content="{% endraw %}{{ cookiecutter.author_name }}{% raw %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% raw %}{{cookiecutter.description}}{% endraw %}">
+    <meta name="author" content="{% raw %}{{cookiecutter.author_name}}{% endraw %}">
+
+    <title>{% raw %}{{cookiecutter.project_name}}{% endraw %}</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   </head>
 
-  <body>
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-          {% endfor %}
-      {% endif %}
+<body role="document">
 
-      {% block content %}
-      <p>Go the port 3000 or check out the folowing urls:</p>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+      <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">API endpoints <span class="caret"></span></a>
 
-      <ul>
-        <li>users/</li>
-        <li>rest-auth/login/ (POST)</li>
-          <dt>POST: username, email, password</dt>
-          <dt>Returns: Token Key</dt>
-        <li>rest-auth/logout/ (POST)</li>
-          <dt>NOTE: ACCOUNT_LOGOUT_ON_GET = True to allow logout using GET </dt>
-        <li>rest-auth/password/reset/ (POST)</li>
-          <dt>POST: email</dt>
-        <li>rest-auth/password/reset/confirm/ (POST)</li>
-          <dt>POST: uid, token, new_password1, new_password2</dt>
-          <dt>NOTE: uid and token are sent in email after calling /rest-auth/password/reset/</dt>
-        <li>rest-auth/password/change/ (POST)</li>
-          <dt>POST: new_password1, new_password2, old_password</dt>
-          <dt>NOTE: OLD_PASSWORD_FIELD_ENABLED = True to use old_password.</dt>
-          <dt>NOTE: LOGOUT_ON_PASSWORD_CHANGE = False to keep the user logged in after password change</dt>
-        <li>rest-auth/user/ (GET, PUT, PATCH)</li>
-          <dt>POST: username, first_name, last_name</dt>
-          <dt>Returns: pk, username, email, first_name, last_name</dt>
-    
-        <li>rest-auth/registration/ (POST)</li>
-          <dt>POST: username,password1,password2, email</dt>
-        <li>rest-auth/registration/verify-email/ (POST)</li>
-          <dt>POST: key</dt>
+            <ul class="dropdown-menu" role="menu">
+                <!-- these pages don't require user token -->
+                <li><a href="{% raw %}{% url 'signup' %}{% endraw %}">Signup</a></li>
+                <li><a href="{% raw %}{% url 'email-verification' %}{% endraw %}">E-mail verification</a></li>
+                <li><a href="{% raw %}{% url 'login' %}{% endraw %}">Login</a></li>
+                <li><a href="{% raw %}{% url 'password-reset' %}{% endraw %}">Password Reset</a></li>
+                <li><a href="{% raw %}{% url 'password-reset-confirm' %}{% endraw %}">Password Reset Confirm</a></li>
+                <li class="divider"></li>
+                <!-- these pages require user token -->
+                <li><a href="{% raw %}{% url 'user-details' %}{% endraw %}">User details</a></li>
+                <li><a href="{% raw %}{% url 'logout' %}{% endraw %}">Logout</a></li>
+                <li><a href="{% raw %}{% url 'password-change' %}{% endraw %}">Password change</a></li>
+            </ul>
+          </li>
+        </ul>
 
-      </ul>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">{% raw %}{{cookiecutter.project_name}}{% endraw %}</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Demo</a></li>
+            <li><a target="_blank" href="{% raw %}{% url 'api_docs' %}{% endraw %}">API Docs</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
 
-      {% endblock content %}
+
+    <div class="container theme-showcase" role="main">
+      {% raw %}{% block content %}{% endblock %}{% endraw %}
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var error_response = function(data){
+        $('.api-response').html("API Response: " + data.status + ' ' + data.statusText + '<br/>Content: ' + data.responseText);
+      }
+      var susccess_response = function(data){
+        $('.api-response').html("API Response: OK<br/>Content: " + JSON.stringify(data));
+      }
+
+      $().ready(function(){
+        $('form.ajax-post button[type=submit]').click(function(){
+          var form = $('form.ajax-post');
+          $.post(form.attr('action'), form.serialize())
+          .fail(function(data){error_response(data);})
+          .done(function(data){susccess_response(data);});
+          return false;
+        });
+      });
+    </script>
+    {% raw %}{% block script %}{% endblock %}{% endraw %}
   </body>
 </html>
-{%- endraw %}
