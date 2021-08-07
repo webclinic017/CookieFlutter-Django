@@ -332,12 +332,8 @@ REST_FRAMEWORK = {
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
 CORS_URLS_REGEX = r"^/api/.*$"
-CORS_ORIGIN_WHITELIST = [ # SPLITPOINT
-    'http://0.0.0.0:3000', # SPLITPOINT
-    'http://0.0.0.0:8000', # SPLITPOINT
-    'https:/{{cookiecutter.domain_name}}', # SPLITPOINT
-  
-] # SPLITPOINT
+CORS_ORIGIN_ALLOW_ALL = True # NEWADD 
+
 CORS_ALLOW_CREDENTIALS = True # SPLITPOINT
 
 REST_SESSION_LOGIN = True # NEWADD
