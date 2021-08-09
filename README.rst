@@ -50,18 +50,22 @@ Finally, move to the root directory and enter the following:
 
     $ docker-compose -f local.yml up
     
+By default, this app comes with an authentication interface running as both a standard JQuery interface and as a DRF interface, soon to be migrated to a SPA.
+
+For a list of DRF endpoints you can view the docs here: https://dj-rest-auth.readthedocs.io/en/latest/api_endpoints.html
+    
+There is one caveat to this dual interface: it is uncertain which user authentication email verification url should be standard in the emails sent to user. 
+
+I currently have the default set to the DRF authentication method which will soon be implemented into an SPA. 
+
+However, keep in mind that if you want to use the standard templated interface, you shouuld replace the '/dj-rest-auth/account-confirm-email/' in the emails sent with '/account/confirm-email/'.
+
+If you want to change this setting permanently simply navigate to {{cookiecutter.project_slug}}/users/adapters and replace the commented line with the line above it
+
+
 
 Troubleshooting
 ---------------
 
 IF you opt in to both Celery AND PostGIS, the first time you start this up, celerybeat may not properly insert a colomn into the database. However, the second time it will all work fine.
 
-
-Usage
-------
-
-By default, this app comes with an authentication interface running as both a standard JQuery interface and as a DRF interface, soon to be migrated to a SPA.
-
-For a list of DRF endpoints you can view the docs here: https://dj-rest-auth.readthedocs.io/en/latest/api_endpoints.html
-
-There is one caveat to this dual interface: it is uncertain which user authentication email verification url should be standard in the emails sent to user. I currently have the defaul set to the DRF authentication method which will soon be implemented into an SPA. However, keep in mind that if you want to use the standard templated interface, you shouuld replace the '/dj-rest-auth/account-confirm-email/' in the emails sent with '/account/confirm-email/'.
