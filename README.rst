@@ -46,7 +46,7 @@ Now run it against this repo::
 
 You'll be prompted for some values. Provide them, then a project will be created for you.
 
-Finally, move to the root directory and enter the following:
+Finally, move to the root directory and enter the following::
 
     $ docker-compose -f local.yml up
     
@@ -72,14 +72,14 @@ If you want to fire up the Flutter frontend, you'll have to first, have isntalle
 
 For more on that you can follow these docs: https://flutter.dev/docs/get-started/install
 
-Once you've got your machine set up you can run the following in the frontend_flutter dir:
+Once you've got your machine set up you can run the following in the frontend_flutter dir::
 
         $ flutter channel master
 
         $ flutter upgrade
 
         $ flutter pub get
-        
+
         $ flutter run
 
 
