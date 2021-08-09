@@ -16,7 +16,6 @@ from drf_yasg import openapi # NEWADD
 
 from dj_rest_auth.registration.views import VerifyEmailView # NEWADD2
 
-
 schema_view = get_schema_view(openapi.Info(title='API Docs',default_version='v1',)) # NEWRM
 
 
