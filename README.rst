@@ -52,3 +52,7 @@ Finally, move to the root directory and enter the following:
     
 You should now be able to navigate to either port 8000/api for a DRF auth interface or port 3000 for a React based front-end. Enjoy!
 
+Troubleshooting
+---------------
+
+The first time you start this up, celerybeat (assuming you opted into Celery) may not properly insert a colomn into the database, however, the second time it will all work fine.
