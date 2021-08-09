@@ -29,7 +29,7 @@ class UserViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, GenericV
         serializer = UserSerializer(request.user, context={"request": request})
         return Response(status=status.HTTP_200_OK, data=serializer.data)
 
-
+# https://github.com/iMerica/dj-rest-auth/blob/master/dj_rest_auth/registration/views.py
 class VerifyEmailView(APIView, ConfirmEmailView):
     permission_classes = (AllowAny,)
     allowed_methods = ('GET', 'POST', 'OPTIONS', 'HEAD')
