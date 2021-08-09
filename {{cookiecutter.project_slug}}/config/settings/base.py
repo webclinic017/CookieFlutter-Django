@@ -72,13 +72,13 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-    # 'allauth.socialaccount.providers.facebook', # NEWADD # SPLITPOINT
+    # 'allauth.socialaccount.providers.facebook',  
     "rest_framework",
     "rest_framework.authtoken",
     "corsheaders",
-    'dj_rest_auth', # NEWADD
-    'dj_rest_auth.registration', # NEWADD
-    'drf_yasg', # NEWADD
+    'dj_rest_auth', 
+    'dj_rest_auth.registration', 
+    'drf_yasg', 
     {%- if cookiecutter.use_celery == 'y' %}
     "django_celery_beat",
     {%- endif %}
@@ -299,13 +299,13 @@ ACCOUNT_ALLOW_REGISTRATION = env.bool("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_EMAIL_REQUIRED = True # SPLITPOINT
+ACCOUNT_EMAIL_REQUIRED = True 
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_EMAIL_VERIFICATION = "mandatory" # SPLITPOINT
+ACCOUNT_EMAIL_VERIFICATION = "mandatory" 
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.AccountAdapter" # NEWRM
+ACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.AccountAdapter" 
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-SOCIALACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.SocialAccountAdapter" # NEWRM
+SOCIALACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.SocialAccountAdapter" 
 # personal pet peeve
 LOGOUT_ON_PASSWORD_CHANGE = False
 
@@ -323,25 +323,25 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
-        'dj_rest_auth.jwt_auth.JWTCookieAuthentication' # NEWADD
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication' 
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' # NEWADD
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' 
 
 }
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
 CORS_URLS_REGEX = r"^/api/.*$"
-CORS_ORIGIN_ALLOW_ALL = True # NEWADD 
+CORS_ORIGIN_ALLOW_ALL = True  
 
-CORS_ALLOW_CREDENTIALS = True # SPLITPOINT
+CORS_ALLOW_CREDENTIALS = True 
 
-REST_SESSION_LOGIN = True # NEWADD
-REST_USE_JWT = True # NEWADD
-JWT_AUTH_COOKIE = 'auth' # NEWADD
-SWAGGER_SETTINGS = {'LOGIN_URL': 'login', 'LOGOUT_URL': 'logout',} # NEWADD
+REST_SESSION_LOGIN = True 
+REST_USE_JWT = True 
+JWT_AUTH_COOKIE = 'auth' 
+SWAGGER_SETTINGS = {'LOGIN_URL': 'login', 'LOGOUT_URL': 'logout',} 
 
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField' # NEWADD
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField' 
 
 
 # Your stuff...

@@ -33,10 +33,10 @@ django-redis==5.0.0  # https://github.com/jazzband/django-redis
 # Django REST Framework
 djangorestframework==3.12.4  # https://github.com/encode/django-rest-framework
 django-cors-headers==3.7.0 # https://github.com/adamchainz/django-cors-headers
-dj-rest-auth # NEWADD 
-djangorestframework-simplejwt==4.7.1 # NEWADD
-drf-yasg==1.20.0 # NEWADD 
-coreapi==2.3.3 # NEWADD
+dj-rest-auth  
+djangorestframework-simplejwt==4.7.1 
+drf-yasg==1.20.0  
+coreapi==2.3.3 
 
 
 

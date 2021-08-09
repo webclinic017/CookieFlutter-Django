@@ -5,41 +5,46 @@ from django.contrib import admin
 {%- if cookiecutter.use_async == 'y' %}
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 {%- endif %}
-from django.urls import path 
+from django.urls import path, re_path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
 
-from django.conf.urls import include, url # NEWADD
-from django.views.generic import RedirectView # NEWADD
-from drf_yasg.views import get_schema_view # NEWADD
-from drf_yasg import openapi # NEWADD
+from django.conf.urls import include, url 
+from django.views.generic import RedirectView 
+from drf_yasg.views import get_schema_view 
+from drf_yasg import openapi 
 
-from dj_rest_auth.registration.views import VerifyEmailView # NEWADD2
+from {{cookiecutter.project_slug}}.users.api.views import VerifyEmailView 
 
-schema_view = get_schema_view(openapi.Info(title='API Docs',default_version='v1',)) # NEWRM
+schema_view = get_schema_view(openapi.Info(title='API Docs',default_version='v1',)) 
 
 
 urlpatterns = [
 
-    url(r'^$', TemplateView.as_view(template_name="home.html"), name='home'), # NEWADD
-    url(r'^signup/$', TemplateView.as_view(template_name="signup.html"), name='signup'), # NEWADD
-    url(r'^email-verification/$', TemplateView.as_view(template_name="email_verification.html"), name='email-verification'), # NEWADD
-    url(r'^login/$', TemplateView.as_view(template_name="login.html"), name='login'), # NEWADD
-    url(r'^logout/$', TemplateView.as_view(template_name="logout.html"), name='logout'), # NEWADD
-    url(r'^password-reset/$', TemplateView.as_view(template_name="password_reset.html"), name='password-reset'), # NEWADD
-    url(r'^password-reset/confirm/$', TemplateView.as_view(template_name="password_reset_confirm.html"), name='password-reset-confirm'), # NEWADD
-    url(r'^user-details/$', TemplateView.as_view(template_name="user_details.html"), name='user-details'), # NEWADD
-    url(r'^password-change/$', TemplateView.as_view(template_name="password_change.html"), name='password-change'), # NEWADD
-    url(r'^password-reset/confirm/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,32})/$',  # NEWADD
-        TemplateView.as_view(template_name="password_reset_confirm.html"), name='password_reset_confirm'), # NEWADD
-    url(r'^dj-rest-auth/', include('dj_rest_auth.urls')), # NEWADD
-    url(r'^dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')), # NEWADD
+    url(r'^$', TemplateView.as_view(template_name="home.html"), name='home'), 
+    url(r'^signup/$', TemplateView.as_view(template_name="signup.html"), name='signup'), 
+    url(r'^email-verification/$', TemplateView.as_view(template_name="email_verification.html"), name='email-verification'), 
+    url(r'^login/$', TemplateView.as_view(template_name="login.html"), name='login'), 
+    url(r'^logout/$', TemplateView.as_view(template_name="logout.html"), name='logout'), 
+    url(r'^password-reset/$', TemplateView.as_view(template_name="password_reset.html"), name='password-reset'), 
+    url(r'^password-reset/confirm/$', TemplateView.as_view(template_name="password_reset_confirm.html"), name='password-reset-confirm'), 
+    url(r'^user-details/$', TemplateView.as_view(template_name="user_details.html"), name='user-details'), 
+    url(r'^password-change/$', TemplateView.as_view(template_name="password_change.html"), name='password-change'), 
+    url(r'^password-reset/confirm/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,32})/$',  
+        TemplateView.as_view(template_name="password_reset_confirm.html"), name='password_reset_confirm'), 
+    url(r'^dj-rest-auth/', include('dj_rest_auth.urls')), 
+    url(r'^dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')), 
     # https://dj-rest-auth.readthedocs.io/en/latest/api_endpoints.html
-    path('dj-rest-auth/account-confirm-email/', VerifyEmailView.as_view(), name='account_email_verification_sent'), # NEWADD
-    url(r'^account/', include('allauth.urls')), # NEWADD
-    url(settings.ADMIN_URL, admin.site.urls), # SPLITPOINT
-    url(r'^accounts/profile/$', RedirectView.as_view(url='/', permanent=True), name='profile-redirect'), # NEWADD
-    url(r'^docs/$', schema_view.with_ui('swagger', cache_timeout=0), name='api_docs') # NEWADD
+    # https://github.com/iMerica/dj-rest-auth/blob/master/dj_rest_auth/registration/urls.py
+    re_path(
+        r'^dj-rest-auth/account-confirm-email/(?P<key>[-:\w]+)/$',
+        VerifyEmailView.as_view(),
+        name='account_email_verification_sent'
+    ), 
+    url(r'^account/', include('allauth.urls')), 
+    url(settings.ADMIN_URL, admin.site.urls), 
+    url(r'^accounts/profile/$', RedirectView.as_view(url='/', permanent=True), name='profile-redirect'), 
+    url(r'^docs/$', schema_view.with_ui('swagger', cache_timeout=0), name='api_docs') 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
