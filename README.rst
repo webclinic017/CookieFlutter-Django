@@ -60,7 +60,7 @@ I currently have the default set to the DRF authentication method which will soo
 
 However, keep in mind that if you want to use the standard templated interface, you shouuld replace the '/dj-rest-auth/account-confirm-email/' in the emails sent with '/account/confirm-email/'.
 
-If you want to change this setting permanently simply navigate to {{cookiecutter.project_slug}}/users/adapters and replace the commented line with the line above it
+If you want to change this setting permanently simply navigate to {{cookiecutter.project_slug}}/users/adapters and swap the commented line with the line above it
 
 
 
