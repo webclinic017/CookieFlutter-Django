@@ -76,9 +76,7 @@ Once you've got your machine set up you can run the following in the frontend_fl
 
         $ flutter channel master
         $ flutter upgrade
-
         $ flutter pub get
-
         $ flutter run
 
 
