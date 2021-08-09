@@ -13,7 +13,7 @@ class AccountAdapter(DefaultAccountAdapter):
     def get_email_confirmation_url(self, request, emailconfirmation):
         current_site = get_current_site(request)
         return '{}/dj-rest-auth/account-confirm-email/{}/'.format(current_site, emailconfirmation.key)
-        #return '{}/account/confirm-email/{}/'.format(current_site, emailconfirmation.key)
+        # return '{}/email-verification/{}/'.format(current_site, emailconfirmation.key)
 
 class SocialAccountAdapter(DefaultSocialAccountAdapter):
     def is_open_for_signup(self, request: HttpRequest, sociallogin: Any):

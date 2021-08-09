@@ -58,7 +58,7 @@ There is one caveat to this dual interface: it is uncertain which user authentic
 
 I currently have the default set to the DRF authentication method which will soon be implemented into an SPA. 
 
-However, keep in mind that if you want to use the standard templated interface, you shouuld replace the '/dj-rest-auth/account-confirm-email/' in the emails sent with '/account/confirm-email/'.
+However, keep in mind that if you want to use the standard templated interface, you shouuld replace the '/dj-rest-auth/account-confirm-email/' in the emails sent with '/email-verification'.
 
 If you want to change this setting permanently simply navigate to {{cookiecutter.project_slug}}/users/adapters and swap the commented line with the line above it
 
