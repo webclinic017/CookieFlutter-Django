@@ -55,4 +55,4 @@ You should now be able to navigate to either port 8000/api for a DRF auth interf
 Troubleshooting
 ---------------
 
-The first time you start this up, celerybeat (assuming you opted into Celery) may not properly insert a colomn into the database, however, the second time it will all work fine.
+IF you opt in to both Celery AND PostGIS, the first time you start this up, celerybeat may not properly insert a colomn into the database. However, the second time it will all work fine.
