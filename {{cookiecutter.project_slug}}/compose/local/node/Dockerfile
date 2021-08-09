@@ -1,9 +1,9 @@
 FROM node:10-stretch-slim
 
-WORKDIR /app/frontend
+WORKDIR /app/frontend_react
 
-COPY ./frontend/package.json /app/frontend
+COPY ./frontend_react/package.json /app/frontend_react
 
 RUN npm install && npm cache clean --force
 
-ENV PATH ./frontend/node_modules/.bin/:$PATH
+ENV PATH ./frontend_react/node_modules/.bin/:$PATH

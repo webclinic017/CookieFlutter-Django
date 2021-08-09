@@ -52,5 +52,9 @@
     "Gitlab",
     "Github"
   ],
-  "debug": "n"
+  "debug": "n",
+  "_copy_without_render": [
+    "*.arb",
+    "*.dart"
+  ]
 }

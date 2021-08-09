@@ -3,9 +3,9 @@ ARG PYTHON_VERSION=3.9-slim-buster
 FROM node:10-stretch-slim as client-builder
 
 ARG APP_HOME=/app
-WORKDIR ${APP_HOME}/frontend
+WORKDIR ${APP_HOME}/frontend_react
 
-COPY ./frontend/package.json ${APP_HOME}/frontend
+COPY ./frontend_react/package.json ${APP_HOME}/frontend_react
 RUN npm i && npm install && npm cache clean --force
 COPY . ${APP_HOME}
 RUN npm run build

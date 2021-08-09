@@ -25,16 +25,16 @@ Please sign the petition_ for a spork emoji
     :target: https://github.com/ambv/black
     :alt: Code style: black
 
-Powered by Cookiecutter_, Octopod Spork is a framework for jumpstarting
-production-ready Django projects quickly.
+Powered by Cookiecutter, Octopod Spork is a framework for jumpstarting production-ready Django projects quickly.
 
 
 Overview
 ---------
-Octopod Spork is a spin off of Cookiecutter Django. It is customized for my workflow and includes features such as gis tools, web scraping tools, data science tools, celery voulumes, and a bare bones react app.
+Octopod Spork is a spin off of Cookiecutter Django. It is customized for my workflow and includes features such as gis tools, web scraping tools, data science tools, celery voulumes, a react frontend on port 3000 and a flutter frontend.
 
-Usage
-------
+
+Usage (Backend)
+---------------
 
 First, get Cookiecutter. Trust me, it's awesome::
 
@@ -63,9 +63,40 @@ However, keep in mind that if you want to use the standard templated interface, 
 If you want to change this setting permanently simply navigate to {{cookiecutter.project_slug}}/users/adapters and swap the commented line with the line above it
 
 
+Usage (Frontend)
+----------------
+
+If you want to only deploy the React frontend, firing up the back is good enough, the React app will start aswell on port 3000.
+
+If you want to fire up the Flutter frontend, you'll have to first, have isntalled all the necessary packages and configured your local machine. 
+
+For more on that you can follow these docs: https://flutter.dev/docs/get-started/install
+
+Once you've got your machine set up you can run the following in the frontend_flutter dir:
+
+```bash
+flutter channel master
+flutter upgrade
+flutter pub get
+flutter run
+```
 
 Troubleshooting
 ---------------
 
 IF you opt in to both Celery AND PostGIS, the first time you start this up, celerybeat may not properly insert a colomn into the database. However, the second time it will all work fine.
+
+
+Todo List
+---------
+
+I've still got to finish integrating the React and Flutter front-ends with the authentication on the back end. 
+
+After that, I'll start working on altering the cookiecutter code to allow users of this to have the option to choose between the following front ends:
+
+1. Standard (template-based)
+2. React SPA
+3. Flutter
+
+Finally, I'll adjust the production settings accordingly to allow for seamless push to production.
 

@@ -97,7 +97,7 @@ services:
     volumes:
       - .:/app:z
       # http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
-      - /app/frontend/node_modules
+      - /app/frontend_react/node_modules
     command: npm run dev
     command: npm start
     ports:
