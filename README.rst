@@ -1,10 +1,5 @@
-Octopod Spork 🐙
-===================
-
-Please sign the petition_ for a spork emoji 
-
-.. _petition: https://www.change.org/p/apple-we-as-a-union-ad-people-need-a-spork-emoji-now
-
+CookieFlutter Django
+====================
 
 .. image:: https://img.shields.io/github/workflow/status/pydanny/cookiecutter-django/CI/master
     :target: https://github.com/pydanny/cookiecutter-django/actions?query=workflow%3ACI
@@ -18,12 +13,10 @@ Please sign the petition_ for a spork emoji
     :target: https://github.com/ambv/black
     :alt: Code style: black
 
-Powered by Cookiecutter, Octopod Spork is a framework for jumpstarting production-ready Django projects quickly.
-
 
 Overview
 ---------
-Octopod Spork is a spin off of Cookiecutter Django. It is customized for my workflow and includes features such as gis tools, web scraping tools, data science tools, celery voulumes, and a flutter frontend.
+CookieFlutter Django is a spin off of Cookiecutter Django. It is customized for my workflow and includes features such as gis tools, web scraping tools, data science tools, celery voulumes, and a flutter frontend.
 
 
 Usage (Backend)
