@@ -1,5 +1,5 @@
-CookieFlutter Django 🍪✂️ 
-===========================
+CookieFlutter Django 🍪✂️ 🚀🦄 
+============================
 
 .. image:: https://img.shields.io/github/workflow/status/pydanny/cookiecutter-django/CI/master
     :target: https://github.com/pydanny/cookiecutter-django/actions?query=workflow%3ACI
