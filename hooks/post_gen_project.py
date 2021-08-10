@@ -82,18 +82,6 @@ def remove_heroku_build_hooks():
     shutil.rmtree("bin")
 
 
-def remove_gulp_files():
-    file_names = ["gulpfile.js"]
-    for file_name in file_names:
-        os.remove(file_name)
-
-
-def remove_packagejson_file():
-    file_names = ["package.json"]
-    for file_name in file_names:
-        os.remove(file_name)
-
-
 def remove_celery_files():
     file_names = [
         os.path.join("config", "celery_app.py"),
@@ -295,10 +283,6 @@ def remove_envs_and_associated_files():
 def remove_celery_compose_dirs():
     shutil.rmtree(os.path.join("compose", "local", "django", "celery"))
     shutil.rmtree(os.path.join("compose", "production", "django", "celery"))
-
-
-def remove_node_dockerfile():
-    shutil.rmtree(os.path.join("compose", "local", "node"))
 
 
 def remove_aws_dockerfile():

@@ -105,16 +105,6 @@ coverage
 # Bower dependency directory (https://bower.io/)
 bower_components
 
-# node-waf configuration
-.lock-wscript
-
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
-
 # Typescript v1 declaration files
 typings/
 
@@ -123,9 +113,6 @@ typings/
 
 # Optional eslint cache
 .eslintcache
-
-# Optional REPL history
-.node_repl_history
 
 # Output of 'npm pack'
 *.tgz

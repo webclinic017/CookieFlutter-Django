@@ -23,7 +23,7 @@ Powered by Cookiecutter, Octopod Spork is a framework for jumpstarting productio
 
 Overview
 ---------
-Octopod Spork is a spin off of Cookiecutter Django. It is customized for my workflow and includes features such as gis tools, web scraping tools, data science tools, celery voulumes, a react frontend on port 3000 and a flutter frontend.
+Octopod Spork is a spin off of Cookiecutter Django. It is customized for my workflow and includes features such as gis tools, web scraping tools, data science tools, celery voulumes, and a flutter frontend.
 
 
 Usage (Backend)
@@ -35,7 +35,7 @@ First, get Cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/julianwagle/octopod-spork
+    $ cookiecutter https://github.com/julianwagle/cookieflutter-django
 
 You'll be prompted for some values. Provide them, then a project will be created for you.
 
@@ -59,13 +59,11 @@ If you want to change this setting permanently simply navigate to {{cookiecutter
 Usage (Frontend)
 ----------------
 
-If you want to only deploy the React frontend, firing up the back is good enough, the React app will start aswell on port 3000.
-
 If you want to fire up the Flutter frontend, you'll have to first, have isntalled all the necessary packages and configured your local machine. 
 
 For more on that you can follow these docs: https://flutter.dev/docs/get-started/install
 
-Once you've got your machine set up you can run the following in the frontend_flutter dir::
+Once you've got your machine set up you can run the following in the frontend dir::
 
         $ flutter channel master
         $ flutter upgrade
@@ -82,13 +80,7 @@ IF you opt in to both Celery AND PostGIS, the first time you start this up, cele
 Todo List
 ---------
 
-I've still got to finish integrating the React and Flutter front-ends with the authentication on the back end. 
-
-After that, I'll start working on altering the cookiecutter code to allow users of this to have the option to choose between the following front ends:
-
-1. Standard (template-based)
-2. React SPA
-3. Flutter
+I've still got to finish integrating the front-end with the authentication on the back end. 
 
 Finally, I'll adjust the production settings accordingly to allow for seamless push to production.
 
