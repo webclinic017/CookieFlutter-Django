@@ -75,11 +75,6 @@ def remove_heroku_files():
             # don't remove the file if we are using travisci but not using heroku
             continue
         os.remove(file_name)
-    remove_heroku_build_hooks()
-
-
-def remove_heroku_build_hooks():
-    shutil.rmtree("bin")
 
 
 def remove_celery_files():
@@ -335,7 +330,6 @@ def main():
 
     if "{{ cookiecutter.use_heroku }}".lower() == "n":
         remove_heroku_files()
-    remove_heroku_build_hooks()
 
     if "{{ cookiecutter.cloud_provider}}".lower() == "none":
         print(
