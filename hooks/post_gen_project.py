@@ -335,8 +335,7 @@ def main():
 
     if "{{ cookiecutter.use_heroku }}".lower() == "n":
         remove_heroku_files()
-    elif "{{ cookiecutter.use_compressor }}".lower() == "n":
-        remove_heroku_build_hooks()
+    remove_heroku_build_hooks()
 
     if "{{ cookiecutter.cloud_provider}}".lower() == "none":
         print(
