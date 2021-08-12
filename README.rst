@@ -16,7 +16,8 @@ CookieFlutter Django 🍪✂️ 🚀🦄 🎯
 
 Overview
 ---------
-CookieFlutter Django is a spin off of Cookiecutter Django. It is customized for my workflow and includes features such as gis tools, web scraping tools, data science tools, celery voulumes, and a flutter frontend.
+CookieFlutter Django is a spin off of Cookiecutter Django. 
+It is customized for my workflow and includes tools for handling GIS data, web-scraping, data analyisis, task managament, cron jobs, and a Flutter frontend.
 
 
 Usage (Backend)
@@ -34,19 +35,9 @@ You'll be prompted for some values. Provide them, then a project will be created
 
 Finally, move to the root directory and enter the following::
 
-    $ docker-compose -f local.yml up
+    $ docker-compose -f local.yml up --build
     
-By default, this app comes with an authentication interface running as both a standard JQuery interface and as a DRF interface, soon to be migrated to a SPA.
-
 For a list of DRF endpoints you can view the docs here: https://dj-rest-auth.readthedocs.io/en/latest/api_endpoints.html
-    
-There is one caveat to this dual interface: it is uncertain which user authentication email verification url should be standard in the emails sent to user. 
-
-I currently have the default set to the DRF authentication method which will soon be implemented into an SPA. 
-
-However, keep in mind that if you want to use the standard templated interface, you shouuld replace the '/dj-rest-auth/account-confirm-email/' in the emails sent with '/email-verification'.
-
-If you want to change this setting permanently simply navigate to {{cookiecutter.project_slug}}/users/adapters and swap the commented line with the line above it
 
 
 Usage (Frontend)
@@ -73,7 +64,7 @@ IF you opt in to both Celery AND PostGIS, the first time you start this up, cele
 Todo List
 ---------
 
-I've still got to finish integrating the front-end with the authentication on the back end. 
+I've still got to finish integrating the frontend with the authentication on the back end. 
 
 Finally, I'll adjust the production settings accordingly to allow for seamless push to production.
 
